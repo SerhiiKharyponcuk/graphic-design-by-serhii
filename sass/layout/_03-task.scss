@@ -1,0 +1,101 @@
+.task {
+    background: radial-gradient(circle at center, #2b0000 0%, #000 100%);
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        position: relative;
+        width: 90%;
+        max-width: 340px;
+        padding: 50px 20px;
+        border-radius: 50px;
+        color: #fff;
+        text-align: left;
+        font-family: 'Poppins', sans-serif;
+
+        &--one {
+            background: linear-gradient(145deg, #ff0000, #990000);
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+        }
+
+        &--two {
+            background: linear-gradient(145deg, #2a2a2a, #000);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        &--three {
+            background: linear-gradient(145deg, #990000, #330000);
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: -25px;
+        left: -10px;
+        font-size: 80px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.15);
+        z-index: 0;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #ccc;
+    }
+}
+
+// 💻 Desktop
+@media screen and (min-width: 768px) {
+    .task {
+        padding: 100px 0;
+
+        &__list {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        &__item {
+            max-width: 300px;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+    }
+}

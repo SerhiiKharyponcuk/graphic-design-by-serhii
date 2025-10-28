@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design</title>
+    <!--! Спочатку нормалізатор -->
+    <!--! завантаження modern-normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- іконки -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+
+    <!-- фонти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&family=Sen:wght@700&family=Syncopate:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="./index.html" class="header__button button">Home</a>
+            <button class="header__burger" type="button" aria-label="Open menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#hero" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#task" class="nav__link">My task</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Reviews</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
+                </ul>
+            </nav>
+            <a href="#contacts" class="header__button button">Contact me</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <span class="hero__title-main">Graphic</span>
+                        <span class="hero__title-accent">Design</span>
+                    </h1>
+
+                    <p class="hero__text">
+                        Any kind of work in the field of graphic and motion design
+                    </p>
+
+                    <a href="#contacts" class="hero__button button">Contact me</a>
+
+                    <p class="hero__subtext">Fast and quality work</p>
+                </div>
+
+                <div class="hero__image-wrapper">
+                    <img src="./images/hero-girl.png" alt="Graphic designer portrait" class="hero__image"
+                        loading="lazy" />
+                </div>
+            </div>
+        </section>
+        <section class="task" id="task">
+            <div class="task__container container">
+                <h2 class="task__title">My Task</h2>
+
+                <ul class="task__list">
+                    <li class="task__item task__item--one">
+                        <span class="task__number">1</span>
+                        <div class="task__content">
+                            <h3 class="task__subtitle">Satisfy the client with quality work.</h3>
+                        </div>
+                    </li>
+
+                    <li class="task__item task__item--two">
+                        <span class="task__number">2</span>
+                        <div class="task__content">
+                            <h3 class="task__subtitle">24 hours a day in touch</h3>
+                            <p class="task__text">
+                                The client always has the opportunity to get in touch with me.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="task__item task__item--three">
+                        <span class="task__number">3</span>
+                        <div class="task__content">
+                            <h3 class="task__subtitle">Work in the field of graphic design</h3>
+                            <p class="task__text">
+                                I carry out all orders in the field of design, such as branding,
+                                landing pages, website design, logos, banners, brochures, and
+                                illustrations.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="projects__container container">
+                <h2 class="projects__title">Projects</h2>
+
+                <div class="projects__list">
+                    <!-- 1 -->
+                    <div class="projects__card">
+                        <img src="./images/project1.jpg" alt="Business Cards design" class="projects__image"
+                            loading="lazy" />
+                        <div class="projects__info">
+                            <h3 class="projects__name">Business Cards</h3>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank"
+                                rel="noopener">Behance <span>›</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="projects__card">
+                        <img src="./images/project2.jpg" alt="Web Studio Landing Page" class="projects__image"
+                            loading="lazy" />
+                        <div class="projects__info">
+                            <h3 class="projects__name">Website design</h3>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank"
+                                rel="noopener">Behance <span>›</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 3 (прихований спочатку) -->
+                    <div class="projects__card projects__card--hidden">
+                        <img src="./images/project3.jpg" alt="Branding Project" class="projects__image"
+                            loading="lazy" />
+                        <div class="projects__info">
+                            <h3 class="projects__name">Branding</h3>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank">Behance
+                                <span>›</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 4 (прихований спочатку) -->
+                    <div class="projects__card projects__card--hidden">
+                        <img src="./images/project4.jpg" alt="Poster Design" class="projects__image" loading="lazy" />
+                        <div class="projects__info">
+                            <h3 class="projects__name">Poster Design</h3>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank">Behance
+                                <span>›</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="projects__button button" id="seeMoreBtn">See more</button>
+            </div>
+
+        </section>
+        <section class="reviews" id="reviews">
+
+            <div class="reviews__container container">
+                <h2 class="reviews__title">Reviews</h2>
+
+                <div class="reviews__list">
+                    <article class="reviews__item">
+                        <img src="./images/review1.jpg" alt="Daria Gov" class="reviews__photo" loading="lazy" />
+                        <h3 class="reviews__name">Daria Gov</h3>
+                        <p class="reviews__text">
+                            “Creative and professional work. I’m happy to collaborate with Serhii
+                            again in the future.”
+                        </p>
+                    </article>
+
+                    <article class="reviews__item">
+                        <img src="./images/review2.jpg" alt="Anna Schmidt" class="reviews__photo" loading="lazy" />
+                        <h3 class="reviews__name">Anna Schmidt</h3>
+                        <p class="reviews__text">
+                            “Serhii quickly and accurately made a branding concept that exceeded
+                            our expectations.”
+                        </p>
+                    </article>
+                </div>
+
+                <button class="reviews__button button" id="openModalBtn">
+                    Leave a review
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal" id="modal">
+                <div class="modal__content">
+                    <button class="modal__close" id="closeModalBtn">&times;</button>
+                    <h3 class="modal__title">Leave your review</h3>
+                    <form class="modal__form">
+                        <input type="text" placeholder="Your name" class="modal__input" required />
+                        <textarea placeholder="Your feedback" class="modal__textarea" required></textarea>
+                        <button type="submit" class="modal__submit button">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="footer__container container">
+            <div class="footer__column footer__column--left">
+                <h3 class="footer__logo">Uliana Usenko</h3>
+            </div>
+
+            <div class="footer__divider"></div>
+
+            <div class="footer__column footer__column--center">
+                <h4 class="footer__title">Design Services</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#hero" class="footer__link">Main page</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Terms of Service</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__column footer__column--right">
+                <p class="footer__contact">
+                    E-mail:
+                    <a href="mailto:serhii.design@gmail.com" class="footer__link">ulianausenko.design@gmail.com</a>
+                </p>
+                <p class="footer__contact">
+                    Phone:
+                    <a href="tel:+380671234567" class="footer__link">+38 (067) 123-45-67</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
