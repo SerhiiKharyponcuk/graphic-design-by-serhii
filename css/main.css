@@ -155,7 +155,7 @@ body {
 }
 .hero {
   background-color: #000;
-  background-image: url("../../images/background-hero.jpg");
+  background-image: url("../images/1x-desktop-hero.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -253,7 +253,10 @@ body {
   }
 }
 .task {
-  background: radial-gradient(circle at center, #2b0000 0%, #000 100%);
+  background-color: #000;
+  background-image: url("../images/1x-desktop-task.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 60px 0;
   color: #fff;
   text-align: center;
@@ -285,15 +288,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .task__item--one {
-  background: linear-gradient(145deg, #ff0000, #990000);
-  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+  background: linear-gradient(177deg, #daafaf 12.17%, #e50000 79.1%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .task__item--two {
-  background: linear-gradient(145deg, #2a2a2a, #000);
+  background: linear-gradient(166deg, #1f0101 46.6%, rgba(136, 101, 101, 0.26) 100%);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 .task__item--three {
-  background: linear-gradient(145deg, #990000, #330000);
+  background: linear-gradient(180deg, #f0c9c9 40.62%, #430a0a 100%);
   box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
 }
 .task__number {
@@ -340,7 +343,10 @@ body {
   }
 }
 .projects {
-  background: #000;
+  background-color: #000;
+  background-image: url("../images/1x-desktop-project.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 60px 0;
   text-align: center;
   color: #fff;
@@ -431,7 +437,10 @@ body {
   }
 }
 .reviews {
-  background: #000;
+  background-color: #000;
+  background-image: url("../images/1x-desktop-rewiews.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 60px 0;
   color: #fff;
   text-align: center;
