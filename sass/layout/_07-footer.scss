@@ -4,7 +4,7 @@
     padding: 40px 0;
     font-family: 'Poppins', sans-serif;
 
-    &__container {
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -71,7 +71,7 @@
 // 💻 Desktop
 @media screen and (min-width: 768px) {
     .footer {
-        &__container {
+        .container {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;

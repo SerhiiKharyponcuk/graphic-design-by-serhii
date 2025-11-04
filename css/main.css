@@ -62,13 +62,38 @@ body {
   font-weight: 700;
 }
 
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 370px) {
+  .container {
+    width: 370px;
+    outline: 3px red dotted;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    outline: 3px blue dotted;
+  }
+}
+@media screen and (min-width: 1437px) {
+  .container {
+    width: 1437px;
+    outline: 3px green dotted;
+  }
+}
+
 .header {
   z-index: 1;
   position: absolute;
   top: 20px;
   left: 10%;
 }
-.header__container {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -210,7 +235,7 @@ body {
     background-image: url(../images/hero-2x-universal.jpg);
   }
 }
-.hero__container {
+.hero .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,7 +306,7 @@ body {
     text-align: left;
     padding: 100px 0;
   }
-  .hero__container {
+  .hero .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -685,7 +710,7 @@ body {
   padding: 40px 0;
   font-family: "Poppins", sans-serif;
 }
-.footer__container {
+.footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -739,7 +764,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .footer__container {
+  .footer .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
