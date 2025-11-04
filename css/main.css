@@ -265,7 +265,7 @@ body {
   width: 80%;
   max-width: 300px;
   margin-top: 20px;
-  background-image: url(../images/ylana.svg), url(../images/ellipse-4.svg), url(../../images/ellipse-5.svg), url(../../images/ellipse-2.svg), url(../../images/ellipse-1.svg);
+  background-image: url(../images/ylana.svg), url(../images/ellipse-4.svg), url(../images/ellipse-5.svg), url(../images/ellipse-2.svg), url(../images/ellipse-1.svg);
   background-repeat: no-repeat;
   background-position: left 35% bottom 176%, left 10% bottom 20%, right 16.5% top 15%, center, center;
   background-size: 704px 872px, 75px 78px, 62px 60px, 828px 862px, 704px 730px;
