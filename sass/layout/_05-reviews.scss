@@ -1,11 +1,19 @@
 .reviews {
     background-color: #000;
-    background-image: url('../images/1x-desktop-rewiews.jpg');
+    background-image: url(../images/rewiews-1x-desktop.jpg);
     background-size: cover;
     background-position: center;
     padding: 60px 0;
     color: #fff;
     text-align: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image:
+            url(../images/rewiews-2x-desktop.jpg);
+    }
 
     &__title {
         font-size: 28px;

@@ -11,9 +11,9 @@
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- іконки -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/ylana-2x-mobile.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/ylana-2x-mobile.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/ylana-2x-mobile.png" />
 
     <!-- фонти -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,8 +65,6 @@
                 </div>
 
                 <div class="hero__image-wrapper">
-                    <img src="./images/1x-ylana-desktop.png" alt="Graphic designer portrait" class="hero__image"
-                        loading="lazy" />
                 </div>
             </div>
         </section>
@@ -110,54 +108,102 @@
             <div class="projects__container container">
                 <h2 class="projects__title">Projects</h2>
 
-                <div class="projects__list">
+                <div class="projects__list first">
                     <!-- 1 -->
                     <div class="projects__card">
-                        <img src="./images/project1.jpg" alt="Business Cards design" class="projects__image"
-                            loading="lazy" />
+                        <picture>
+                            <source srcset="
+              ./images/bulls-1x-desktop.png,
+              ./images/bulls-2x-desktop.png
+            " media="(min-width: 768px)" />
+                            <source srcset="
+              ./images/bulls-1x-mobile.png,
+              ./images/bulls-2x-mobile.png
+            " />
+                            <img src="./images/bulls-1x-mobile.png" alt="Website design" class="projects__image"
+                                loading="lazy" />
+                        </picture>
+
                         <div class="projects__info">
-                            <h3 class="projects__name">Business Cards</h3>
-                            <a href="https://www.behance.net/" class="projects__link" target="_blank"
-                                rel="noopener">Behance <span>›</span></a>
+                            <h3 class="projects__name">Website design</h3>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank" rel="noopener">
+                                Behance <span>›</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- 2 -->
-                    <div class="projects__card">
-                        <img src="./images/project2.jpg" alt="Web Studio Landing Page" class="projects__image"
-                            loading="lazy" />
+                    <div class="projects__card second">
+                        <picture>
+                            <source srcset="
+              ./images/lading-1x-desktop.png,
+              ./images/lading-2x-desktop.png
+            " media="(min-width: 768px)" />
+                            <source srcset="
+              ./images/lading-1x-mobile.png,
+              ./images/lading-2x-mobile.png
+            " />
+                            <img src="./images/lading-1x-mobile.png" alt="Website design" class="projects__image"
+                                loading="lazy" />
+                        </picture>
+
                         <div class="projects__info">
                             <h3 class="projects__name">Website design</h3>
-                            <a href="https://www.behance.net/" class="projects__link" target="_blank"
-                                rel="noopener">Behance <span>›</span></a>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank" rel="noopener">
+                                Behance <span>›</span>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- 3 (прихований спочатку) -->
-                    <div class="projects__card projects__card--hidden">
-                        <img src="./images/project3.jpg" alt="Branding Project" class="projects__image"
-                            loading="lazy" />
+                    <!-- 3 -->
+                    <div class="projects__card projects__card--hidden third">
+                        <picture>
+                            <source srcset="
+              ./images/spiritual-1x-desktop.png,
+              ./images/spiritual-2x-desktop.png
+            " media="(min-width: 768px)" />
+                            <source srcset="
+              ./images/spiritual-1x-desktop.png,
+              ./images/spiritual-2x-desktop.png
+            " />
+                            <img src="./images/spiritual-1x-desktop.png" alt="Branding project" class="projects__image"
+                                loading="lazy" />
+                        </picture>
+
+                        <div class="projects__info">
+                            <h3 class="projects__name">Banners</h3>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank" rel="noopener">
+                                Behance <span>›</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="projects__card projects__card--hidden last">
+                        <picture>
+                            <source srcset="
+              ./images/itp-1x-desktop.png,
+              ./images/itp-2x-desktop.png
+            " media="(min-width: 768px)" />
+                            <source srcset="
+              ./images/itp-1x-desktop.png,
+              ./images/itp-2x-desktop.png
+            " />
+                            <img src="./images/itp-2x-desktop.png" alt="Branding" class="projects__image"
+                                loading="lazy" />
+                        </picture>
+
                         <div class="projects__info">
                             <h3 class="projects__name">Branding</h3>
-                            <a href="https://www.behance.net/" class="projects__link" target="_blank">Behance
-                                <span>›</span></a>
-                        </div>
-                    </div>
-
-                    <!-- 4 (прихований спочатку) -->
-                    <div class="projects__card projects__card--hidden">
-                        <img src="./images/project4.jpg" alt="Poster Design" class="projects__image" loading="lazy" />
-                        <div class="projects__info">
-                            <h3 class="projects__name">Poster Design</h3>
-                            <a href="https://www.behance.net/" class="projects__link" target="_blank">Behance
-                                <span>›</span></a>
+                            <a href="https://www.behance.net/" class="projects__link" target="_blank" rel="noopener">
+                                Behance <span>›</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <button class="projects__button button" id="seeMoreBtn">See more</button>
             </div>
-
         </section>
         <section class="reviews" id="reviews">
 

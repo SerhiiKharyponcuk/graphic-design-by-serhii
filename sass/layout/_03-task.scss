@@ -1,11 +1,19 @@
 .task {
     background-color: #000;
-    background-image: url('../images/1x-desktop-task.jpg');
+    background-image: url(../images/task-1x-universal.jpg);
     background-size: cover;
     background-position: center;
     padding: 60px 0;
     color: #fff;
     text-align: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image:
+            url(../images/task-2x-universal.jpg);
+    }
 
     &__title {
         font-size: 28px;
@@ -37,7 +45,7 @@
 
         &--one {
             background: linear-gradient(177deg, #daafaf 12.17%, #e50000 79.1%);
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         }
 
         &--two {

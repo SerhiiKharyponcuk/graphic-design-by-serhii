@@ -1,13 +1,21 @@
 .hero {
     background-color: #000;
-    background-image: url('../images/1x-desktop-hero.jpg');
+    background-image: url(../images/hero-1x-universal.jpg);
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 60px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+    height: 1090px;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image:
+            url(../images/hero-2x-universal.jpg);
+    }
 
     &__container {
         display: flex;
@@ -63,10 +71,24 @@
     }
 
     &__image-wrapper {
-        position: relative;
+        width: 870px;
+        height: 930px;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        z-index: 1;
         width: 80%;
         max-width: 300px;
         margin-top: 20px;
+        background-image: url(../images/ylana.svg),
+            url(../images/ellipse-4.svg),
+            url(../../images/ellipse-5.svg),
+            url(../../images/ellipse-2.svg),
+            url(../../images/ellipse-1.svg)
+        ;
+        background-repeat: no-repeat;
+        background-position: left 35% bottom 176%,left 10% bottom 20%,right 16.5% top 15%,center,center;
+        background-size: 704px 872px, 75px 78px,62px 60px, 828px 862px, 704px 730px;
     }
 
     &__image {
@@ -110,7 +132,7 @@
         }
 
         &__image-wrapper {
-            max-width: 400px;
+            max-width: 870px;
         }
     }
 }
