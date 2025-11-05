@@ -7,16 +7,19 @@
 
     @media screen and (min-width: 370px) {
         width: 370px;
-        outline: 3px red dotted;
+        max-width: 370px;
+        // outline: 2px red dotted;
     }
 
     @media screen and (min-width: 768px) {
         width: 768px;
-        outline: 3px blue dotted;
+        max-width: 768px;
+        // outline: 2px red dotted;
     }
 
     @media screen and (min-width:1437px) {
         width: 1437px;
-        outline: 3px green dotted;
+        max-width: 1437px;
+        // outline: 2px red dotted;
     }
 }

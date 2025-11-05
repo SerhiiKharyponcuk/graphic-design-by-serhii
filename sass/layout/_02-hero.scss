@@ -8,13 +8,13 @@
     position: relative;
     overflow: hidden;
     height: 1090px;
+    width: 100vw;
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        background-image:
-            url(../images/hero-2x-universal.jpg);
+        background-image: url(../images/hero-2x-universal.jpg);
     }
 
     .container {
@@ -24,37 +24,29 @@
         gap: 20px;
     }
 
-    &__title {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 36px;
-        line-height: 1.1;
-        text-transform: uppercase;
-
-        &-main {
-            display: block;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        &-accent {
-            display: block;
-            color: #e40000;
-            font-weight: 700;
-        }
-    }
-
     &__text {
-        font-size: 14px;
-        max-width: 280px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #f00;
         margin: 10px auto 20px;
-        color: #e40000;
     }
 
-    &__button {
+    .button {
         background: #e40000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        left: 10%;
+        bottom: 52%;
         color: #fff;
-        padding: 10px 26px;
         border-radius: 25px;
+        width: 133px;
+        height: 43px;
         font-weight: 500;
         text-decoration: none;
         transition: background 0.3s ease;
@@ -69,70 +61,304 @@
         color: #ccc;
         margin-top: 20px;
     }
-
-    &__image-wrapper {
-        width: 870px;
-        height: 930px;
-        position: absolute;
-        left: 15%;
-        top: 15%;
-        z-index: 1;
-        width: 80%;
-        max-width: 300px;
-        margin-top: 20px;
-        background-image: url(../images/ylana.svg),
-            url(../images/ellipse-4.svg),
-            url(../images/ellipse-5.svg),
-            url(../images/ellipse-2.svg),
-            url(../images/ellipse-1.svg)
-        ;
-        background-repeat: no-repeat;
-        background-position: left 35% bottom 176%,left 10% bottom 20%,right 16.5% top 15%,center,center;
-        background-size: 704px 872px, 75px 78px,62px 60px, 828px 862px, 704px 730px;
-    }
-
-    &__image {
-        width: 100%;
-        border-radius: 8px;
-        object-fit: cover;
-    }
 }
 
-// 💻 Desktop
-@media screen and (min-width: 768px) {
+// mobile
+@media screen and (min-width: 370px) {
     .hero {
         text-align: left;
         padding: 100px 0;
+        height: 640px;
+
+        &__text {
+            font-size: 14px;
+            width: 140px;
+            max-width: 280px;
+            color: #e40000;
+        }
+    }
+}
+
+.hero {
+    text-align: left;
+    padding: 100px 0;
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: var(--font-family-2);
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #eee;
+        text-shadow: 6px 2px 0 #d80808, 10px 4px 0 #6a1212, 0 0 8px rgba(0, 0, 0, 0.4);
+
+        &-main {
+            position: absolute;
+            z-index: 2;
+            left: 8%;
+            top: 23%;
+        }
+
+        &-accent {
+            position: absolute;
+            z-index: 2;
+            bottom: 65%;
+            right: 45%;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        left: 12%;
+        bottom: 20%;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #f00;
+    }
+
+    &__subtext {
+        position: absolute;
+        right: 18%;
+        top: 75%;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 221%;
+        letter-spacing: 0.01em;
+        color: #bb9292;
+    }
+
+    &__image-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-25%, -60%);
+        margin-top: 20px;
+        width: 631px;
+        max-width: 380px;
+        height: 450px;
+        background-image: url(../images/ylana.svg),
+            url(../images/ellipse-4-in.svg),
+            url(../images/ellipse-4.svg),
+            url(../images/ellipse-5.svg),
+            url(../images/ellipse-2.svg),
+            url(../images/ellipse-1.svg);
+        background-repeat: no-repeat;
+        background-position: left 28px bottom 50px, left 55px bottom 80px, left 35px bottom 60px,
+            right 210px bottom 16px, center, center;
+        background-size: 333px 405px, 15px 15px, 55px 55px, 40px 40px, 400px 400px, 365px 365px;
+    }
+}
+
+// tablet
+@media screen and (min-width: 768px) {
+    .hero {
+        height: 1090px;
 
         .container {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            gap: 40px;
         }
 
         &__title {
             font-size: 60px;
+
+            &-main {
+                left: 4%;
+                top: 17%;
+            }
+
+            &-accent {
+                bottom: 35%;
+                right: 6%;
+            }
         }
 
         &__text {
-            font-size: 16px;
-            margin: 20px 0 30px;
-            max-width: 400px;
+            width: 300px;
+            left: 2%;
+            bottom: 15%;
+            font-size: 18px;
+            line-height: 147%;
+            letter-spacing: 0.05em;
         }
 
-        &__button {
-            font-size: 16px;
-            padding: 12px 32px;
+        .button {
+            display: none;
         }
 
         &__subtext {
-            margin-top: 30px;
-            font-size: 14px;
+            right: 18%;
+            top: 80%;
+            font-size: 18px;
+            line-height: 147%;
+            letter-spacing: 0.05em;
         }
 
         &__image-wrapper {
-            max-width: 870px;
+            width: 628px;
+            max-width: 628px;
+            height: 690px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            margin-top: 20px;
+            background-image: url(../images/ylana.svg),
+                url(../images/ellipse-4-in.svg),
+                url(../images/ellipse-4.svg),
+                url(../images/ellipse-5.svg),
+                url(../images/ellipse-2.svg),
+                url(../images/ellipse-1.svg);
+            background-repeat: no-repeat;
+            background-position: left 55px bottom 90px, left 60px bottom 170px, left 25px bottom 135px,
+                right 200px bottom 25px, center, center;
+            background-size: 504px 606px, 25px 25px, 95px 95px, 70px 70px, 628px 628px, 504px 504px;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .hero {
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__title {
+            font-size: 60px;
+
+            &-main {
+                left: 5%;
+                top: 26%;
+            }
+
+            &-accent {
+                bottom: 23%;
+                right: 6%;
+            }
+        }
+
+        &__text {
+            width: 300px;
+            left: 2%;
+            bottom: 23%;
+            font-size: 18px;
+            line-height: 147%;
+            letter-spacing: 0.05em;
+        }
+
+        .button {
+            display: none;
+        }
+
+        &__subtext {
+            right: 7%;
+            top: 62%;
+            font-size: 18px;
+            line-height: 147%;
+            letter-spacing: 0.05em;
+        }
+
+        &__image-wrapper {
+            width: 628px;
+            max-width: 628px;
+            height: 690px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            margin-top: 20px;
+            background-image: url(../images/ylana.svg),
+                url(../images/ellipse-4-in.svg),
+                url(../images/ellipse-4.svg),
+                url(../images/ellipse-5.svg),
+                url(../images/ellipse-2.svg),
+                url(../images/ellipse-1.svg);
+            background-repeat: no-repeat;
+            background-position: left 55px bottom 90px, left 60px bottom 170px, left 25px bottom 135px,
+                right 20px bottom 190px, center, center;
+            background-size: 504px 606px, 25px 25px, 95px 95px, 70px 70px, 628px 628px, 504px 504px;
+        }
+    }
+
+    // 💻 Desktop
+    @media screen and (min-width: 1400px) {
+        .hero {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 40px;
+            }
+
+            &__title {
+                font-size: 96px;
+
+                &-main {
+                    left: 5%;
+                    top: 26%;
+                }
+
+                &-accent {
+                    bottom: 23%;
+                    right: 6%;
+                }
+            }
+
+            &__text {
+                left: 10%;
+                bottom: 14%;
+                font-size: 18px;
+                line-height: 147%;
+                letter-spacing: 0.05em;
+            }
+
+            .button {
+                display: none;
+            }
+
+            &__subtext {
+                right: 14%;
+                top: 23%;
+                font-size: 18px;
+                line-height: 147%;
+                letter-spacing: 0.05em;
+            }
+
+            &__image-wrapper {
+                width: 767px;
+                max-width: 767px;
+                height: 930px;
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url(../images/ylana.svg),
+                    url(../images/ellipse-4-in.svg),
+                    url(../images/ellipse-4.svg),
+                    url(../images/ellipse-5.svg),
+                    url(../images/ellipse-2.svg),
+                    url(../images/ellipse-1.svg);
+                background-repeat: no-repeat;
+                background-position: left 35px bottom 130px, left 75px bottom 185px, left 35px bottom 145px,
+                    right 55px top 155px, center, center;
+                background-size: 704px 806px, 35px 35px, 115px 115px, 90px 90px, 828px 828px, 704px 704px;
+            }
         }
     }
 }

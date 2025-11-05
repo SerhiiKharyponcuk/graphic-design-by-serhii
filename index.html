@@ -10,7 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/ylana.svg" />
     <link rel="icon" type="image/png" sizes="16x16" href="./images/ylana.svg" /> -->
     <!--! My icon -->
-    <link href="https://img.icons8.com/ios-filled/16/windows10-personalization.png" type="image/x-icon" rel="shortcut icon">
+    <link href="https://img.icons8.com/?size=100&id=knK7kI5Dv73l&format=png&color=FA5252" type="image/x-icon"
+        rel="shortcut icon">
 
     <!--! Спочатку нормалізатор -->
     <!--! завантаження modern-normalize -->
@@ -30,11 +31,11 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="./index.html" class="header__button button">Home</a>
+            <a href="./index.html" class="header__link">Home</a>
             <button class="header__burger" type="button" aria-label="Open menu">
-                <span class="header__burger-line"></span>
-                <span class="header__burger-line"></span>
-                <span class="header__burger-line"></span>
+                <svg class="icon-burger" width="50" height="30">
+                    <use href="./images/sprite.svg#icon-burger"></use>
+                </svg>
             </button>
             <nav class="header__nav nav">
                 <ul class="nav__list">
@@ -45,7 +46,7 @@
                     <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
                 </ul>
             </nav>
-            <a href="#contacts" class="header__button button">Contact me</a>
+            <a href="#contacts" class="header__link">Contact me</a>
         </div>
     </header>
     <main>
@@ -61,7 +62,7 @@
                         Any kind of work in the field of graphic and motion design
                     </p>
 
-                    <a href="#contacts" class="hero__button button">Contact me</a>
+                    <a href="#contacts" class="button">Contact me</a>
 
                     <p class="hero__subtext">Fast and quality work</p>
                 </div>

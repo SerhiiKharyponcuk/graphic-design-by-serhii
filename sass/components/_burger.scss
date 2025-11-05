@@ -1,0 +1,22 @@
+.icon-burger {
+    fill: var(--background-color-1);
+    width: 33px;
+    height: 30px;
+}
+.header__burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 33px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &-line {
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+        }
+    }

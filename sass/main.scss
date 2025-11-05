@@ -1,13 +1,14 @@
-
-@import "./base/reset";
-@import "./base/common";
-@import "./utils/variables";
-@import "./utils/mixins";
-@import "./components/containers";
-@import "./components/modal";
-@import "./layout/01-header";
-@import "./layout/02-hero";
-@import "./layout/03-task";
-@import "./layout/04-projects";
-@import "./layout/05-reviews";
-@import "./layout/07-footer";
+@use "sass:string";
+@use "./utils/variables" as *;
+@use "./utils/mixins" as *;
+@use "./base/reset" as *;
+@use "./base/common" as *;
+@use "./components/containers" as *;
+@use "./components/burger" as *;
+@use "./components/modal" as *;
+@use "./layout/01-header" as *;
+@use "./layout/02-hero" as *;
+@use "./layout/03-task" as *;
+@use "./layout/04-projects" as *;
+@use "./layout/05-reviews" as *;
+@use "./layout/07-footer" as *;
