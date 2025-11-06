@@ -1,26 +1,33 @@
 .task {
-    background-color: #000;
+    background-color: var(--color-3);
     background-image: url(../images/task-1x-universal.jpg);
     background-size: cover;
     background-position: center;
     padding: 60px 0;
-    color: #fff;
+    color: var(--color-2);
     text-align: center;
+    position: relative;
+    height: 822px;
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        background-image:
-            url(../images/task-2x-universal.jpg);
+        background-image: url(../images/task-2x-universal.jpg);
     }
 
     &__title {
-        font-size: 28px;
+        position: absolute;
+        top: 15px;
+        transform: translate(45%, -20%);
+        font-family: var(--font-family-2);
         font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        color: #fff;
+        font-size: 32px;
+        color: var(--color-4);
+        text-shadow: 6px 2px 0 var(--color-3),
+            10px 4px 0 #1a1a1a,
+            0 0 8px rgba(0, 0, 0, 0.6);
+
     }
 
     &__list {
@@ -35,38 +42,126 @@
 
     &__item {
         position: relative;
-        width: 90%;
         max-width: 340px;
+        width: 95%;
         padding: 50px 20px;
         border-radius: 50px;
-        color: #fff;
+        color: var(--color-2);
         text-align: left;
-        font-family: 'Poppins', sans-serif;
 
         &--one {
-            background: linear-gradient(177deg, #daafaf 12.17%, #e50000 79.1%);
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            position: absolute;
+            top: 12%;
+            left: 10%;
+            margin-top: 20px;
+            max-width: 670px;
+            height: 140px;
+            background-image:
+                url(../images/task-one.svg),
+                url(../images/task-ellipse-6.svg),
+                url(../images/task-ellipse-28.svg);
+            background-repeat: no-repeat;
+            background-position: left 3px bottom 15px, left bottom 15px, left bottom;
+            background-size: 43.4px 107.8px, 268.1px 122.5px, 276.5px 142.1px;
+
+            .task__subtitle {
+                position: absolute;
+                left: 50px;
+                bottom: -15px;
+                width: 185px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 15px;
+                color: var(--color-3);
+            }
         }
 
         &--two {
-            background: linear-gradient(166deg, #1f0101 46.6%, rgba(136, 101, 101, 0.26) 100%);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 13%;
+            left: 12%;
+            margin-top: 20px;
+            max-width: 780px;
+            height: 405px;
+            background-image:
+                url(../images/task-two.svg),
+                url(../images/task-ellipse-7-mobile.svg),
+                url(../images/task-ellipse-29-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: left 3px bottom 15px, left 0 bottom 35px, left bottom 10px;
+            background-size: 63px 98px, 300.5px 245px, 302.5px 281.4px;
+
+            .task__content {
+                position: absolute;
+                left: 70px;
+                bottom: 100px;
+                width: 219px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--color-2);
+                white-space: pre-line;
+            }
+
+            .task__subtitle {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 15px;
+                color: var(--color-5);
+            }
         }
 
         &--three {
-            background: linear-gradient(180deg, #f0c9c9 40.62%, #430a0a 100%);
-            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
-        }
-    }
+            position: absolute;
+            top: 35%;
+            left: 2%;
+            margin-top: 20px;
+            max-width: 872px;
+            height: 400px;
+            background-image:
+                url(../images/task-three.svg),
+                url(../images/task-ellipse-8.svg),
+                url(../images/task-ellipse-30.svg);
+            background-repeat: no-repeat;
+            background-position: left 45px bottom 20px, left 30px bottom 20px, left 15px bottom 5px;
+            background-size: 63px 98px, 317.63px 240.02px, 340.16px 250.47px;
 
-    &__number {
-        position: absolute;
-        top: -25px;
-        left: -10px;
-        font-size: 80px;
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.15);
-        z-index: 0;
+            .task__content {
+                position: absolute;
+                left: 175px;
+                bottom: 115px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--color-2);
+            }
+
+            .task__subtitle {
+                position: absolute;
+                left: -40px;
+                width: 320px;
+                padding-top: 30px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 12px;
+                color: var(--color-3);
+            }
+
+            .task__text {
+                width: 137px;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 8px;
+                text-align: right;
+                color: var(--color-3);
+                white-space: pre-line;
+            }
+        }
+
+        .task__text {
+            font-family: var(--font-family);
+            font-weight: 400;
+        }
     }
 
     &__content {
@@ -77,36 +172,229 @@
     &__subtitle {
         font-size: 16px;
         font-weight: 600;
-        color: #fff;
+        color: var(--color-2);
         margin-bottom: 10px;
     }
 
     &__text {
         font-size: 14px;
         line-height: 1.5;
-        color: #ccc;
+        color: var(--color-8);
     }
 }
 
-// 💻 Desktop
+/* Tablet */
 @media screen and (min-width: 768px) {
     .task {
-        padding: 100px 0;
+        height: 945px;
 
-        &__list {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
+        &__item--one {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            margin-top: 20px;
+            max-width: 670px;
+            height: 300px;
+            background-image:
+                url(../images/task-one.svg),
+                url(../images/task-ellipse-6.svg),
+                url(../images/task-ellipse-28.svg),
+                url(../images/task-heart.svg),
+                url(../images/task-ellipse-9.svg);
+            background-repeat: no-repeat;
+            background-position: left 3px bottom 15px, left bottom 15px, left bottom, right 30px top -30px, right 90px top 25px;
+            background-size: 62px 154px, 383px 175px, 395px 203px, 250px 250px, 130px 130px;
+
+            .task__subtitle {
+                position: absolute;
+                left: 70px;
+                bottom: -145px;
+                width: 233px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--color-3);
+            }
         }
 
-        &__item {
-            max-width: 300px;
+        &__item--two {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            margin-top: 20px;
+            max-width: 780px;
+            height: 405px;
+            background-image:
+                url(../images/task-two.svg),
+                url(../images/task-ellipse-7.svg),
+                url(../images/task-ellipse-29.svg),
+                url(../images/task-message.svg),
+                url(../images/task-ellipse-10.svg);
+            background-repeat: no-repeat;
+            background-position: left 3px bottom 15px, left 0 bottom 35px, left bottom, right 145px top 28px, right 120px top 0;
+            background-size: 90px 140px, 375px 350px, 375px 402px, 100px 100px, 150px 150px;
+
+            .task__content {
+                left: 90px;
+                bottom: 180px;
+            }
+        }
+
+        &__item--three {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            margin-top: 20px;
+            max-width: 872px;
+            height: 400px;
+            background-image:
+                url(../images/task-three.svg),
+                url(../images/task-ellipse-8.svg),
+                url(../images/task-ellipse-30.svg),
+                url(../images/task-laptop.svg),
+                url(../images/task-ellipse-15.svg);
+            background-repeat: no-repeat;
+            background-position: left 45px bottom 20px, left 50px bottom 24px, left bottom, right 20px top 12px, right 10px top 0;
+            background-size: 90px 140px, 475.19px 351.46px, 525.94px 397.81px, 150px 150px, 175px 175px;
+
+            .task__content {
+                left: 240px;
+                bottom: 145px;
+            }
+
+            .task__subtitle {
+                font-size: 18px;
+                color: var(--color-3);
+            }
+
+            .task__text {
+                width: 245px;
+                font-size: 16px;
+                color: var(--color-3);
+            }
         }
 
         &__title {
-            font-size: 40px;
-            margin-bottom: 60px;
+            position: absolute;
+            top: 1%;
+            left: 5%;
+            font-family: var(--font-family-2);
+            font-weight: 700;
+            font-size: 57px;
+            color: var(--color-4);
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .task {
+        height: 945px;
+
+        &__item--one {
+            position: absolute;
+            top: 5%;
+            left: 20%;
+            margin-top: 20px;
+            max-width: 670px;
+            height: 300px;
+            background-image:
+                url(../images/task-one.svg),
+                url(../images/task-ellipse-6.svg),
+                url(../images/task-ellipse-28.svg),
+                url(../images/task-heart.svg),
+                url(../images/task-ellipse-9.svg);
+            background-repeat: no-repeat;
+            background-position: left 3px bottom 15px, left bottom 15px, left bottom, right 30px top -30px, right 90px top 25px;
+            background-size: 62px 154px, 383px 175px, 395px 203px, 250px 250px, 130px 130px;
+
+            .task__subtitle {
+                position: absolute;
+                left: 70px;
+                bottom: -145px;
+                width: 233px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--color-3);
+            }
+        }
+
+        &__item--two {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            margin-top: 20px;
+            max-width: 780px;
+            height: 405px;
+            background-image:
+                url(../images/task-two.svg),
+                url(../images/task-ellipse-7.svg),
+                url(../images/task-ellipse-29.svg),
+                url(../images/task-message.svg),
+                url(../images/task-ellipse-10.svg);
+            background-repeat: no-repeat;
+            background-position: left 3px bottom 15px, left 0 bottom 35px, left bottom, right 145px top 28px, right 120px top 0;
+            background-size: 90px 140px, 375px 350px, 375px 402px, 100px 100px, 150px 150px;
+
+            .task__content {
+                left: 90px;
+                bottom: 180px;
+            }
+        }
+
+        &__item--three {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            margin-top: 20px;
+            max-width: 872px;
+            height: 400px;
+            background-image:
+                url(../images/task-three.svg),
+                url(../images/task-ellipse-8.svg),
+                url(../images/task-ellipse-30.svg),
+                url(../images/task-laptop.svg),
+                url(../images/task-ellipse-15.svg);
+            background-repeat: no-repeat;
+            background-position: left 45px bottom 20px, left 50px bottom 24px, left bottom, right 113px top 12px, right 100px top 0;
+            background-size: 90px 140px, 475.19px 351.46px, 525.94px 397.81px, 150px 150px, 175px 175px;
+
+            .task__content {
+                left: 240px;
+                bottom: 145px;
+            }
+
+            .task__subtitle {
+                position: absolute;
+                left: -40px;
+                width: 320px;
+                padding-top: 30px;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--color-3);
+            }
+
+            .task__text {
+                width: 245px;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                text-align: right;
+                color: var(--color-3);
+                white-space: pre-line;
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 1%;
+            left: -5%;
+            font-family: var(--font-family-2);
+            font-weight: 700;
+            font-size: 57px;
+            color: var(--color-4);
         }
     }
 }

@@ -2,6 +2,7 @@
     z-index: 1;
     position: absolute;
     top: 20px;
+    width: 90%;
 
     .container {
         display: flex;
@@ -15,7 +16,7 @@
         top: 60px;
         right: 0;
         width: 100%;
-        background: #000;
+        background: var(--background-color-2);
         padding: 20px 0;
 
         &--active {
@@ -25,8 +26,8 @@
 
     &__link {
         display: none;
-        background: #e40000;
-        color: #fff;
+        background: var(--background-color-1);
+        color: var(--color-2);
         border-radius: 20px;
         text-decoration: none;
     }
@@ -43,18 +44,19 @@
     }
 
     &__link {
-        color: #fff;
+        color: var(--color-2);
         text-decoration: none;
         font-size: 16px;
 
         &:hover {
-            color: #e40000;
+            color: var(--color-6);
         }
     }
 }
 
 @media screen and (min-width: 768px) {
     .header {
+        width: 100%;
         &__burger {
             display: none;
         }
@@ -76,7 +78,7 @@
             font-family: var(--font-family);
             font-weight: 900;
             font-size: 19px;
-            color: #fff;
+            color: var(--color-2);
             border-radius: 27px;
             background-color: var(--background-color-1);
         }

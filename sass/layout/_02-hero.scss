@@ -1,9 +1,9 @@
 .hero {
-    background-color: #000;
+    background-color: var(--color-3);
     background-image: url(../images/hero-1x-universal.jpg);
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: var(--color-2);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -30,12 +30,12 @@
         font-size: 12px;
         line-height: 100%;
         letter-spacing: 0.01em;
-        color: #f00;
+        color: var(--color-6);
         margin: 10px auto 20px;
     }
 
     .button {
-        background: #e40000;
+        background: var(--background-color-1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,7 +43,7 @@
         z-index: 2;
         left: 10%;
         bottom: 52%;
-        color: #fff;
+        color: var(--color-2);
         border-radius: 25px;
         width: 133px;
         height: 43px;
@@ -52,13 +52,13 @@
         transition: background 0.3s ease;
 
         &:hover {
-            background: #ff3333;
+            background: var(--color-6);
         }
     }
 
     &__subtext {
         font-size: 13px;
-        color: #ccc;
+        color: var(--color-7);
         margin-top: 20px;
     }
 }
@@ -74,7 +74,7 @@
             font-size: 14px;
             width: 140px;
             max-width: 280px;
-            color: #e40000;
+            color: var(--background-color-1);
         }
     }
 }
@@ -95,8 +95,10 @@
         font-size: 33px;
         line-height: 100%;
         letter-spacing: 0.01em;
-        color: #eee;
-        text-shadow: 6px 2px 0 #d80808, 10px 4px 0 #6a1212, 0 0 8px rgba(0, 0, 0, 0.4);
+        color: var(--color-8);
+        text-shadow: 6px 2px 0 var(--background-color-1),
+            10px 4px 0 #6a1212,
+            0 0 8px rgba(0, 0, 0, 0.4);
 
         &-main {
             position: absolute;
@@ -122,7 +124,7 @@
         font-size: 12px;
         line-height: 100%;
         letter-spacing: 0.01em;
-        color: #f00;
+        color: var(--color-6);
     }
 
     &__subtext {
@@ -134,7 +136,7 @@
         font-size: 12px;
         line-height: 221%;
         letter-spacing: 0.01em;
-        color: #bb9292;
+        color: var(--color-7);
     }
 
     &__image-wrapper {
@@ -295,7 +297,7 @@
         }
     }
 
-    // 💻 Desktop
+    // Desktop
     @media screen and (min-width: 1400px) {
         .hero {
             .container {
