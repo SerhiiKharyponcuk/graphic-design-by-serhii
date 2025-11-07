@@ -1,15 +1,16 @@
 .projects {
-    background-color: #000;
+    background-color: var(--background-color-2);
     background-image: url(../images/project-1x-desktop.jpg);
     background-size: cover;
     background-position: center;
     padding: 60px 0;
     text-align: center;
-    color: #fff;
+    color: var(--color-2);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 1236px;
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -19,28 +20,36 @@
     }
 
     &__title {
-        font-size: 28px;
-        text-transform: uppercase;
-        margin-bottom: 40px;
         position: absolute;
-        left: 3%;
         top: 2%;
+        left: 25%;
+        font-family: var(--font-family-2);
+        font-weight: 700;
+        font-size: 33px;
+        letter-spacing: -0.1em;
+        color: var(--color-5);
+        text-shadow: 6px 2px 0 var(--color-3),
+            10px 4px 0 #1a1a1a,
+            0 0 8px rgba(0, 0, 0, 0.6);
     }
 
     &__list {
+        position: absolute;
+        transform: translate(3%, -75%);
+        width: 99%;
+        height: 620px;
+        gap: 160px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        position: relative;
+        justify-content: center;
     }
 
     &__card {
         border: 2px solid rgba(29, 28, 28, 0.33);
         border-radius: 11px;
-        width: 445px;
-        height: 286px;
-        background: linear-gradient(180deg, #e30707 0%, #6a1212 73.1%);
+        width: 350px;
+        height: 225px;
+        background: var(--background-gradient);
         box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -56,26 +65,26 @@
 
     &__image {
         border-radius: 17px;
-        width: 372px;
-        height: 231px;
-        display: block;
-        justify-content: center;
-        align-items: center;
+        width: 296px;
+        height: 184px;
+        position: absolute;
+        margin: 20px 25px;
     }
 
     &__info {
-        padding: 20px;
+        position: absolute;
+        transform: translate(0%, 575%);
         text-align: left;
     }
 
     &__name {
         font-size: 18px;
         margin-bottom: 8px;
-        color: #fff;
+        color: var(--color-2);
     }
 
     &__link {
-        color: #ff3b3b;
+        color: var(--color-6);
         text-decoration: none;
         font-size: 14px;
 
@@ -89,11 +98,13 @@
     }
 
     &__button {
-        background: #e40000;
-        color: #fff;
-        margin-top: 40px;
-        padding: 12px 30px;
-        border-radius: 25px;
+        position: absolute;
+        transform: translate(-46%, 665%);
+        background: var(--color-6);
+        color: var(--color-2);
+        border-radius: 27px;
+        width: 184px;
+        height: 64px;
         font-size: 16px;
         font-weight: 500;
         border: none;
@@ -105,59 +116,167 @@
         }
     }
 
-    // 💻 Desktop view
-    @media screen and (min-width: 767px) {
-        &__list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 221px;
-            grid-row-gap: 136px;
-            justify-content: center;
-        }
-
-        &__card {
-            max-width: 300px;
-        }
-
-        // Позиції карток у гріді
-        &__card.first {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
-        &__card.second {
-            grid-area: 1 / 2 / 2 / 3;
-        }
-
-        &__card.third {
-            grid-area: 2 / 1 / 3 / 2;
-        }
-
-        &__card.last {
-            grid-area: 2 / 2 / 3 / 3;
-        }
-
-        &__button {
-            width: 186px;
-            height: 68px;
-        }
-
-        &__card {
-            border: 2px solid rgba(29, 28, 28, 0.33);
-            border-radius: 11px;
-            width: 445px;
-            height: 286px;
-            background: linear-gradient(180deg, #e30707 0%, #6a1212 73.1%);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    /* 💻 Tablet */
+    @media screen and (min-width: 768px) {
+        .projects {
+            &__title {
+                top: 1%;
+                left: 5%;
+                font-size: 57px;
             }
 
-            &--hidden {
-                display: block;
+            &__info {
+                transform: translate(0%, 665%);
+            }
+
+            &__list {
+                transform: translate(1%, -55%);
+                height: 780px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 30px;
+                grid-row-gap: 90px;
+                justify-content: center;
+            }
+
+            &__image {
+                width: 297px;
+                height: 231px;
+                margin: 25px 28px;
+            }
+
+            &__card {
+                width: 370px;
+                height: 286px;
+
+                &--hidden {
+                    display: block;
+                }
+            }
+
+            &__card.first {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            &__card.second {
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            &__card.third {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            &__card.last {
+                grid-area: 2 / 2 / 3 / 3;
+            }
+
+            &__button {
+                width: 186px;
+                height: 68px;
+            }
+        }
+    }
+
+    /* 💻 Desktop-mini */
+    @media screen and (min-width: 1200px) {
+        .projects {
+            &__info {
+                transform: translate(0%, 665%);
+            }
+
+            &__list {
+                transform: translate(-15%, -50%);
+                width: 1120px;
+                height: 780px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 221px;
+                grid-row-gap: 136px;
+            }
+
+            &__image {
+                width: 372px;
+                height: 231px;
+                margin: 25px 35px;
+            }
+
+            &__card {
+                width: 445px;
+                height: 286px;
+
+                &--hidden {
+                    display: block;
+                }
+            }
+
+            &__card.first {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            &__card.second {
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            &__card.third {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            &__card.last {
+                grid-area: 2 / 2 / 3 / 3;
+            }
+
+            &__button {
+                width: 186px;
+                height: 68px;
+            }
+        }
+    }
+
+    /* 💻 Desktop */
+    @media screen and (min-width: 1437px) {
+        .projects {
+            height: 1236px;
+
+            &__list {
+                transform: translate(15%, -50%);
+            }
+
+            &__image {
+                width: 372px;
+                height: 231px;
+                margin: 25px 35px;
+            }
+
+            &__card {
+                width: 445px;
+                height: 286px;
+
+                &--hidden {
+                    display: block;
+                }
+            }
+
+            &__card.first {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            &__card.second {
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            &__card.third {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            &__card.last {
+                grid-area: 2 / 2 / 3 / 3;
+            }
+
+            &__button {
+                width: 186px;
+                height: 68px;
             }
         }
     }
