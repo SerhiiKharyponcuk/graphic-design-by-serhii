@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 320px;
     max-width: 1600px;
-    // padding: 0 15px;
+    padding: 0 15px;
     margin: 0 auto;
 
     @media screen and (min-width: 370px) {
@@ -14,12 +14,14 @@
     @media screen and (min-width: 768px) {
         width: 768px;
         max-width: 768px;
+        padding: 0 25px;
         // outline: 2px red dotted;
     }
 
     @media screen and (min-width:1437px) {
         width: 1437px;
         max-width: 1437px;
+        padding: 0 60px;
         // outline: 2px red dotted;
     }
 }

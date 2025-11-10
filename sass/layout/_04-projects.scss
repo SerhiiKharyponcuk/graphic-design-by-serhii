@@ -3,14 +3,13 @@
     background-image: url(../images/project-1x-desktop.jpg);
     background-size: cover;
     background-position: center;
-    padding: 60px 0;
+    padding: 90px 0;
     text-align: center;
     color: var(--color-2);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1236px;
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -34,13 +33,9 @@
     }
 
     &__list {
-        position: absolute;
-        transform: translate(3%, -75%);
-        width: 99%;
-        height: 620px;
-        gap: 160px;
-        display: flex;
-        flex-direction: column;
+        gap: 100px;
+        display: grid;
+        align-content: space-between;
         justify-content: center;
     }
 
@@ -72,9 +67,11 @@
     }
 
     &__info {
-        position: absolute;
-        transform: translate(0%, 575%);
-        text-align: left;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+        margin-top: 235px;
     }
 
     &__name {
@@ -98,8 +95,7 @@
     }
 
     &__button {
-        position: absolute;
-        transform: translate(-46%, 665%);
+        margin-top: 90px;
         background: var(--color-6);
         color: var(--color-2);
         border-radius: 27px;
@@ -125,25 +121,29 @@
                 font-size: 57px;
             }
 
-            &__info {
-                transform: translate(0%, 665%);
-            }
 
             &__list {
-                transform: translate(1%, -55%);
-                height: 780px;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
-                grid-column-gap: 30px;
-                grid-row-gap: 90px;
+                grid-column-gap: 20px;
+                grid-row-gap: 80px;
                 justify-content: center;
+                justify-items: center;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+
+                margin-top: 290px;
             }
 
             &__image {
                 width: 297px;
                 height: 231px;
-                margin: 25px 28px;
+                margin: 25px 35px;
             }
 
             &__card {
@@ -178,69 +178,18 @@
         }
     }
 
-    /* 💻 Desktop-mini */
-    @media screen and (min-width: 1200px) {
-        .projects {
-            &__info {
-                transform: translate(0%, 665%);
-            }
-
-            &__list {
-                transform: translate(-15%, -50%);
-                width: 1120px;
-                height: 780px;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-column-gap: 221px;
-                grid-row-gap: 136px;
-            }
-
-            &__image {
-                width: 372px;
-                height: 231px;
-                margin: 25px 35px;
-            }
-
-            &__card {
-                width: 445px;
-                height: 286px;
-
-                &--hidden {
-                    display: block;
-                }
-            }
-
-            &__card.first {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-
-            &__card.second {
-                grid-area: 1 / 2 / 2 / 3;
-            }
-
-            &__card.third {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            &__card.last {
-                grid-area: 2 / 2 / 3 / 3;
-            }
-
-            &__button {
-                width: 186px;
-                height: 68px;
-            }
-        }
-    }
 
     /* 💻 Desktop */
     @media screen and (min-width: 1437px) {
         .projects {
-            height: 1236px;
 
+            
             &__list {
-                transform: translate(15%, -50%);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap:0px;
+                grid-row-gap: 136px;
             }
 
             &__image {

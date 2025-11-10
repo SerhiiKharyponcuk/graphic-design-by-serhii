@@ -3,11 +3,11 @@
     background-image: url(../images/task-1x-universal.jpg);
     background-size: cover;
     background-position: center;
-    padding: 60px 0;
+    padding: 411px 0;
     color: var(--color-2);
     text-align: center;
     position: relative;
-    height: 822px;
+    // height: 822px;
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -202,7 +202,7 @@
                 url(../images/task-heart.svg),
                 url(../images/task-ellipse-9.svg);
             background-repeat: no-repeat;
-            background-position: left 3px bottom 15px, left bottom 15px, left bottom, right 30px top -30px, right 90px top 25px;
+            background-position: left 3px bottom 15px,left bottom 15px,left bottom,right 56px top -8px,right 118px top 52px;
             background-size: 62px 154px, 383px 175px, 395px 203px, 250px 250px, 130px 130px;
 
             .task__subtitle {
@@ -220,7 +220,7 @@
         &__item--two {
             position: absolute;
             top: 30%;
-            left: 15%;
+            left: 10%;
             margin-top: 20px;
             max-width: 780px;
             height: 405px;
@@ -231,7 +231,7 @@
                 url(../images/task-message.svg),
                 url(../images/task-ellipse-10.svg);
             background-repeat: no-repeat;
-            background-position: left 3px bottom 15px, left 0 bottom 35px, left bottom, right 145px top 28px, right 120px top 0;
+            background-position: left 3px bottom 15px,left 0 bottom 35px,left bottom,right 145px top 26px,right 122px top 0px;
             background-size: 90px 140px, 375px 350px, 375px 402px, 100px 100px, 150px 150px;
 
             .task__content {
@@ -243,7 +243,7 @@
         &__item--three {
             position: absolute;
             top: 50%;
-            left: 10%;
+            left: 5%;
             margin-top: 20px;
             max-width: 872px;
             height: 400px;
@@ -254,7 +254,7 @@
                 url(../images/task-laptop.svg),
                 url(../images/task-ellipse-15.svg);
             background-repeat: no-repeat;
-            background-position: left 45px bottom 20px, left 50px bottom 24px, left bottom, right 20px top 12px, right 10px top 0;
+            background-position: left 45px bottom 20px,left 50px bottom 24px,left bottom,right 35px top 25px,right 25px top 15px;
             background-size: 90px 140px, 475.19px 351.46px, 525.94px 397.81px, 150px 150px, 175px 175px;
 
             .task__content {
@@ -276,7 +276,7 @@
 
         &__title {
             position: absolute;
-            top: 1%;
+            top: 26px;
             left: 5%;
             font-family: var(--font-family-2);
             font-weight: 700;
@@ -286,10 +286,11 @@
     }
 }
 
+
 /* Desktop */
 @media screen and (min-width: 1200px) {
     .task {
-        height: 945px;
+        padding: 479px 0;
 
         &__item--one {
             position: absolute;
@@ -320,7 +321,7 @@
             }
         }
 
-        &__item--two {
+      &__item--two {
             position: absolute;
             top: 30%;
             left: 30%;
@@ -342,6 +343,7 @@
                 bottom: 180px;
             }
         }
+
 
         &__item--three {
             position: absolute;
@@ -389,7 +391,7 @@
 
         &__title {
             position: absolute;
-            top: 1%;
+            top: 25px;
             left: -5%;
             font-family: var(--font-family-2);
             font-weight: 700;

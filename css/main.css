@@ -105,6 +105,7 @@ body {
   width: 100%;
   min-width: 320px;
   max-width: 1600px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 370px) {
@@ -117,12 +118,14 @@ body {
   .container {
     width: 768px;
     max-width: 768px;
+    padding: 0 25px;
   }
 }
 @media screen and (min-width: 1437px) {
   .container {
     width: 1437px;
     max-width: 1437px;
+    padding: 0 60px;
   }
 }
 
@@ -522,11 +525,10 @@ body {
   background-image: url(../images/task-1x-universal.jpg);
   background-size: cover;
   background-position: center;
-  padding: 60px 0;
+  padding: 411px 0;
   color: var(--color-2);
   text-align: center;
   position: relative;
-  height: 822px;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .task {
@@ -686,7 +688,7 @@ body {
     height: 300px;
     background-image: url(../images/task-one.svg), url(../images/task-ellipse-6.svg), url(../images/task-ellipse-28.svg), url(../images/task-heart.svg), url(../images/task-ellipse-9.svg);
     background-repeat: no-repeat;
-    background-position: left 3px bottom 15px, left bottom 15px, left bottom, right 30px top -30px, right 90px top 25px;
+    background-position: left 3px bottom 15px, left bottom 15px, left bottom, right 56px top -8px, right 118px top 52px;
     background-size: 62px 154px, 383px 175px, 395px 203px, 250px 250px, 130px 130px;
   }
   .task__item--one .task__subtitle {
@@ -702,13 +704,13 @@ body {
   .task__item--two {
     position: absolute;
     top: 30%;
-    left: 15%;
+    left: 10%;
     margin-top: 20px;
     max-width: 780px;
     height: 405px;
     background-image: url(../images/task-two.svg), url(../images/task-ellipse-7.svg), url(../images/task-ellipse-29.svg), url(../images/task-message.svg), url(../images/task-ellipse-10.svg);
     background-repeat: no-repeat;
-    background-position: left 3px bottom 15px, left 0 bottom 35px, left bottom, right 145px top 28px, right 120px top 0;
+    background-position: left 3px bottom 15px, left 0 bottom 35px, left bottom, right 145px top 26px, right 122px top 0px;
     background-size: 90px 140px, 375px 350px, 375px 402px, 100px 100px, 150px 150px;
   }
   .task__item--two .task__content {
@@ -718,13 +720,13 @@ body {
   .task__item--three {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
     margin-top: 20px;
     max-width: 872px;
     height: 400px;
     background-image: url(../images/task-three.svg), url(../images/task-ellipse-8.svg), url(../images/task-ellipse-30.svg), url(../images/task-laptop.svg), url(../images/task-ellipse-15.svg);
     background-repeat: no-repeat;
-    background-position: left 45px bottom 20px, left 50px bottom 24px, left bottom, right 20px top 12px, right 10px top 0;
+    background-position: left 45px bottom 20px, left 50px bottom 24px, left bottom, right 35px top 25px, right 25px top 15px;
     background-size: 90px 140px, 475.19px 351.46px, 525.94px 397.81px, 150px 150px, 175px 175px;
   }
   .task__item--three .task__content {
@@ -742,7 +744,7 @@ body {
   }
   .task__title {
     position: absolute;
-    top: 1%;
+    top: 26px;
     left: 5%;
     font-family: var(--font-family-2);
     font-weight: 700;
@@ -753,7 +755,7 @@ body {
 /* Desktop */
 @media screen and (min-width: 1200px) {
   .task {
-    height: 945px;
+    padding: 479px 0;
   }
   .task__item--one {
     position: absolute;
@@ -830,7 +832,7 @@ body {
   }
   .task__title {
     position: absolute;
-    top: 1%;
+    top: 25px;
     left: -5%;
     font-family: var(--font-family-2);
     font-weight: 700;
@@ -843,16 +845,14 @@ body {
   background-image: url(../images/project-1x-desktop.jpg);
   background-size: cover;
   background-position: center;
-  padding: 60px 0;
+  padding: 90px 0;
   text-align: center;
   color: var(--color-2);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1236px;
   /* 💻 Tablet */
-  /* 💻 Desktop-mini */
   /* 💻 Desktop */
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -872,13 +872,9 @@ body {
   text-shadow: 6px 2px 0 var(--color-3), 10px 4px 0 #1a1a1a, 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .projects__list {
-  position: absolute;
-  transform: translate(3%, -75%);
-  width: 99%;
-  height: 620px;
-  gap: 160px;
-  display: flex;
-  flex-direction: column;
+  gap: 100px;
+  display: grid;
+  align-content: space-between;
   justify-content: center;
 }
 .projects__card {
@@ -905,9 +901,10 @@ body {
   margin: 20px 25px;
 }
 .projects__info {
-  position: absolute;
-  transform: translate(0%, 575%);
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-top: 235px;
 }
 .projects__name {
   font-size: 18px;
@@ -926,8 +923,7 @@ body {
   text-decoration: underline;
 }
 .projects__button {
-  position: absolute;
-  transform: translate(-46%, 665%);
+  margin-top: 90px;
   background: var(--color-6);
   color: var(--color-2);
   border-radius: 27px;
@@ -948,23 +944,25 @@ body {
     left: 5%;
     font-size: 57px;
   }
-  .projects .projects__info {
-    transform: translate(0%, 665%);
-  }
   .projects .projects__list {
-    transform: translate(1%, -55%);
-    height: 780px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 90px;
+    grid-column-gap: 20px;
+    grid-row-gap: 80px;
     justify-content: center;
+    justify-items: center;
+  }
+  .projects .projects__info {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-top: 290px;
   }
   .projects .projects__image {
     width: 297px;
     height: 231px;
-    margin: 25px 28px;
+    margin: 25px 35px;
   }
   .projects .projects__card {
     width: 370px;
@@ -990,55 +988,13 @@ body {
     height: 68px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .projects .projects__info {
-    transform: translate(0%, 665%);
-  }
+@media screen and (min-width: 1437px) {
   .projects .projects__list {
-    transform: translate(-15%, -50%);
-    width: 1120px;
-    height: 780px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 221px;
+    grid-column-gap: 0px;
     grid-row-gap: 136px;
-  }
-  .projects .projects__image {
-    width: 372px;
-    height: 231px;
-    margin: 25px 35px;
-  }
-  .projects .projects__card {
-    width: 445px;
-    height: 286px;
-  }
-  .projects .projects__card--hidden {
-    display: block;
-  }
-  .projects .projects__card.first {
-    grid-area: 1/1/2/2;
-  }
-  .projects .projects__card.second {
-    grid-area: 1/2/2/3;
-  }
-  .projects .projects__card.third {
-    grid-area: 2/1/3/2;
-  }
-  .projects .projects__card.last {
-    grid-area: 2/2/3/3;
-  }
-  .projects .projects__button {
-    width: 186px;
-    height: 68px;
-  }
-}
-@media screen and (min-width: 1437px) {
-  .projects .projects {
-    height: 1236px;
-  }
-  .projects .projects__list {
-    transform: translate(15%, -50%);
   }
   .projects .projects__image {
     width: 372px;
@@ -1078,6 +1034,7 @@ body {
   padding: 60px 0;
   color: #fff;
   text-align: center;
+  height: 1980px;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .reviews {
