@@ -1257,7 +1257,7 @@ body {
 }
 @media screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .reviews {
-    background-image: url("../images/rewiews-2x-desktop.jpg");
+    background-image: url("../images/reviews-2x-desktop.jpg");
   }
 }
 @media screen and (min-width: 768px) {
