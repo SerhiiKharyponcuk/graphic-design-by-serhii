@@ -3,23 +3,24 @@
     background-image: url(../images/rewiews-1x-desktop.jpg);
     background-size: cover;
     background-position: center;
-    padding: 60px 0;
+    padding: 0 0 1200px 0;
     color: #fff;
     text-align: center;
-    height: 1980px;
+    position: relative;
 
-    @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image:
-            url(../images/rewiews-2x-desktop.jpg);
+    @media (min-resolution: 2dppx) {
+        background-image: url(../images/rewiews-2x-desktop.jpg);
     }
 
     &__title {
-        font-size: 28px;
-        text-transform: uppercase;
-        margin-bottom: 40px;
+        font-family: var(--font-family-2);
+        font-weight: 700;
+        font-size: 33px;
+        letter-spacing: -0.1em;
+        color: #f4bdbd;
+        text-shadow: 6px 2px 0 rgba(255, 0, 0, 0.42),
+            10px 4px 0 #1a1a1a,
+            0 0 8px rgba(0, 0, 0, 0.6);
     }
 
     &__list {
@@ -31,32 +32,121 @@
     }
 
     &__item {
-        background: linear-gradient(145deg, #330000, #1a0000);
-        padding: 30px 20px;
+        padding: 40px 25px;
         border-radius: 25px;
-        max-width: 320px;
+        max-width: 360px;
         text-align: center;
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        position: absolute;
+
+        width: 450px;
+        height: 400px;
+        margin-top: 20px;
+
+        /* ITEM 1 */
+        &--one {
+            top: 35%;
+            left: -1%;
+            background-image:
+                url(../../images/reviews-ellipse-20.svg),
+                url(../../images/reviews-ellipse-34.svg),
+                url(../../images/reviews-anna.svg),
+                url(../../images/reviews-ellipse-19.svg),
+                url(../../images/reviews-ellipse-33.svg);
+            background-repeat: no-repeat;
+            background-position:
+                right 10px bottom -10px, right 10px bottom -10px, left 90px top -40px, left 90px top 99px, left 65px top 75px;
+            background-size: 300px, 290px, 225px, 225px, 275px;
+
+            .reviews__content {
+                position: absolute;
+                left: 100px;
+                bottom: 25px;
+            }
+        }
+
+        /* ITEM 2 */
+        &--two {
+            top: 5%;
+            left: -1%;
+            background-image:
+                url(../../images/reviews-ellipse-27.svg),
+                url(../../images/reviews-ellipse-35.svg),
+                url(../../images/reviews-daria.svg),
+                url(../../images/reviews-ellipse-19.svg),
+                url(../../images/reviews-ellipse-33.svg);
+            background-repeat: no-repeat;
+            background-position:
+                left 49px bottom -5px, left 49px bottom -4px, left 95px top -60px, right 35px top 67px, right 16px top 50px;
+            background-size: 300px, 290px, 225px, 235px, 275px;
+
+            .reviews__content {
+                position: absolute;
+                left: 95px;
+                bottom: 15px
+            }
+        }
+
+        /* ITEM 3 */
+        &--three {
+            top: 67%;
+            left: 2%;
+            background-image:
+                url(../../images/reviews-ellipse-24.svg),
+                url(../../images/reviews-ellipse-36.svg),
+                url(../../images/reviews-mark.svg),
+                url(../../images/reviews-ellipse-22.svg),
+                url(../../images/reviews-ellipse-33.svg);
+            background-repeat: no-repeat;
+            background-position:
+                left 43px bottom 3px, left 43px bottom 0px, left 68px top 14px, right 55px top 108px, right 30px top 85px;
+            background-size: 285px, 290px, 225px, 250px, 300px;
+
+            .reviews__subtitle {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18px;
+                color: #fff;
+            }
+
+            .reviews__content {
+                position: absolute;
+                left: 85px;
+                bottom: 35px;
+            }
+
+            .reviews__text {
+                color: #fff;
+            }
+
+            .reviews__subtitle::after {
+                background-color: #fff;
+            }
+        }
     }
 
-    &__photo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-    }
-
-    &__name {
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 700;
         font-size: 18px;
-        font-weight: 600;
-        color: #fff;
-        margin-bottom: 10px;
+        color: #000;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 205px;
+            height: 2px;
+            background-color: #000;
+            margin: 8px auto 8px;
+            border-radius: 1px;
+        }
     }
 
     &__text {
-        font-size: 14px;
-        color: #ddd;
+        width: 200px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
     }
 
     &__button {
@@ -75,91 +165,224 @@
     }
 }
 
-// 🔲 Modal styles
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-
-    &.modal--active {
-        display: flex;
-    }
-
-    &__content {
-        background: #1a0000;
-        padding: 30px 20px;
-        border-radius: 20px;
-        width: 90%;
-        max-width: 400px;
-        position: relative;
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    }
-
-    &__close {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        background: transparent;
-        border: none;
-        font-size: 28px;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    &__title {
-        font-size: 20px;
-        font-weight: 600;
-        color: #fff;
-        margin-bottom: 20px;
-    }
-
-    &__input,
-    &__textarea {
-        width: 100%;
-        background: #000;
-        color: #fff;
-        border: 1px solid #e40000;
-        border-radius: 10px;
-        padding: 10px;
-        margin-bottom: 15px;
-        resize: none;
-    }
-
-    &__submit {
-        width: 100%;
-        background: #e40000;
-        color: #fff;
-        border: none;
-        border-radius: 25px;
-        padding: 10px;
-        font-weight: 500;
-        cursor: pointer;
-
-        &:hover {
-            background: #ff3333;
-        }
-    }
-}
-
-// 💻 Desktop
+/* 📌 DESKTOP 768px */
 @media screen and (min-width: 768px) {
     .reviews {
-        &__list {
-            flex-direction: row;
-            justify-content: center;
-            gap: 40px;
-        }
+        background-color: #000;
+        background-image: url(../images/rewiews-1x-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 0 0 1200px 0;
+        color: #fff;
+        text-align: center;
+        position: relative;
 
-        &__item {
-            max-width: 280px;
+        @media (min-resolution: 2dppx) {
+            background-image: url(../images/rewiews-2x-desktop.jpg);
         }
 
         &__title {
-            font-size: 36px;
+            font-family: var(--font-family-2);
+            font-weight: 700;
+            font-size: 53px;
+            letter-spacing: -0.1em;
+            color: #f4bdbd;
+            text-shadow: 6px 2px 0 rgba(255, 0, 0, 0.42),
+                10px 4px 0 #1a1a1a,
+                0 0 8px rgba(0, 0, 0, 0.6);
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            padding: 40px 25px;
+            border-radius: 25px;
+            max-width: 465px;
+            text-align: center;
+            position: absolute;
+
+            width: 450px;
+            height: 400px;
+            margin-top: 20px;
+
+            /* ITEM 1 */
+            &--one {
+                top: 3%;
+                left: -5%;
+                background-image:
+                    url(../../images/reviews-ellipse-20.svg),
+                    url(../../images/reviews-ellipse-34.svg),
+                    url(../../images/reviews-anna.svg),
+                    url(../../images/reviews-ellipse-19.svg),
+                    url(../../images/reviews-ellipse-33.svg);
+                background-repeat: no-repeat;
+                background-position:
+                    right 1px bottom 1px,
+                    right 1px bottom 1px,
+                    left 90px top 0,
+                    left 71px top 99px,
+                    left 48px top 80px;
+                background-size: 300px, 290px, 225px, 250px, 300px;
+
+                .reviews__content {
+                    position: absolute;
+                    left: 200px;
+                    bottom: 30px;
+                }
+            }
+
+            /* ITEM 2 */
+            &--two {
+                top: 20%;
+                left: 40%;
+                background-image:
+                    url(../../images/reviews-ellipse-27.svg),
+                    url(../../images/reviews-ellipse-35.svg),
+                    url(../../images/reviews-daria.svg),
+                    url(../../images/reviews-ellipse-19.svg),
+                    url(../../images/reviews-ellipse-33.svg);
+                background-repeat: no-repeat;
+                background-position:
+                    left 1px bottom 15px,
+                    left 1px bottom 15px,
+                    left 190px top -5px,
+                    right 27px top 111px,
+                    right 3px top 89px;
+                background-size: 300px, 290px, 225px, 250px, 300px;
+
+                .reviews__content {
+                    position: absolute;
+                    left: 50px;
+                    bottom: 30px;
+                }
+            }
+
+            /* ITEM 3 */
+            &--three {
+                top: 56%;
+                left: 20%;
+                background-image:
+                    url(../../images/reviews-ellipse-24.svg),
+                    url(../../images/reviews-ellipse-36.svg),
+                    url(../../images/reviews-mark.svg),
+                    url(../../images/reviews-ellipse-22.svg),
+                    url(../../images/reviews-ellipse-33.svg);
+                background-repeat: no-repeat;
+                background-position:
+                    left 90px bottom 21px,
+                    left 90px bottom 15px,
+                    left 125px top -5px,
+                    right 85px top 118px;
+                background-size: 285px, 290px, 225px, 250px, 300px;
+
+                .reviews__subtitle {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #fff;
+                }
+
+                .reviews__content {
+                    position: absolute;
+                    left: 125px;
+                    bottom: 55px;
+                }
+
+                .reviews__text {
+                    color: #fff;
+                }
+
+                .reviews__subtitle::after {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        &__subtitle {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 18px;
+            color: #000;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 205px;
+                height: 2px;
+                background-color: #000;
+                margin: 8px auto 0;
+                border-radius: 1px;
+            }
+        }
+
+        &__text {
+            width: 200px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+
+        &__button {
+            background: #e40000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: #ff3333;
+            }
         }
     }
 }
+
+/* 📌 DESKTOP LARGE 1200px (змінюєш тут top/left як хочеш!) */
+@media screen and (min-width: 1200px) {
+    .reviews {
+
+        /* тут можна змінювати позиції!!! */
+        &__item--one {
+            top: 3%;
+            left: 10%;
+        }
+
+        &__item--two {
+            top: 4%;
+            left: 55%;
+        }
+
+        &__item--three {
+            top: 35%;
+            left: 32%;
+        }
+
+        .container {
+            padding: 26px 1005px 0 0;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+
+            &::after {
+                width: 205px;
+            }
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+
+
+

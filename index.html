@@ -77,17 +77,15 @@
 
                 <ul class="task__list">
                     <li class="task__item task__item--one">
-                        <div class="task__content">
                             <h3 class="task__subtitle">Satisfy the client with quality work.</h3>
-                        </div>
                     </li>
 
                     <li class="task__item task__item--two">
                         <div class="task__content">
                             <h3 class="task__subtitle">24 hours a day in touch</h3>
                             <p class="task__text">The client always has the
-opportunity to get in
-touchwith me.
+                                opportunity to get in
+                                touchwith me.
                             </p>
                         </div>
                     </li>
@@ -95,10 +93,10 @@ touchwith me.
                     <li class="task__item task__item--three">
                         <div class="task__content">
                             <p class="task__text"> I carry out all orders
-in the field of design, such
-as branding, landing, website
-design,logos, banners posters,
-business, brochures,illustrations
+                                in the field of design, such
+                                as branding, landing, website
+                                design,logos, banners posters,
+                                business, brochures,illustrations
                             </p>
                             <h3 class="task__subtitle">Work in the field of graphic design</h3>
                         </div>
@@ -208,47 +206,51 @@ business, brochures,illustrations
             </div>
         </section>
         <section class="reviews" id="reviews">
-
             <div class="container">
                 <h2 class="reviews__title">Reviews</h2>
 
-                <div class="reviews__list">
-                    <article class="reviews__item">
-                        <img src="./images/review1.jpg" alt="Daria Gov" class="reviews__photo" loading="lazy" />
-                        <h3 class="reviews__name">Daria Gov</h3>
-                        <p class="reviews__text">
-                            “Creative and professional work. I’m happy to collaborate with Serhii
-                            again in the future.”
-                        </p>
-                    </article>
+                <ul class="reviews__list">
+                    <li class="reviews__item reviews__item--one">
+                        <div class="reviews__content">
+                            <h3 class="reviews__subtitle">Anna Schmidt</h3>
+                            <p class="reviews__text">
+                                Fast quality work, good service, 24 hours on call, reasonable prices
+                            </p>
+                        </div>
+                    </li>
 
-                    <article class="reviews__item">
-                        <img src="./images/review2.jpg" alt="Anna Schmidt" class="reviews__photo" loading="lazy" />
-                        <h3 class="reviews__name">Anna Schmidt</h3>
-                        <p class="reviews__text">
-                            “Serhii quickly and accurately made a branding concept that exceeded
-                            our expectations.”
-                        </p>
-                    </article>
+                    <li class="reviews__item reviews__item--two">
+                        <div class="reviews__content">
+                            <h3 class="reviews__subtitle">Daria Graf</h3>
+                            <p class="reviews__text">
+                                Сreative approach, listens to the customer and considers an individual approach
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="reviews__item reviews__item--three">
+                        <div class="reviews__content">
+                            <h3 class="reviews__subtitle">Mark Spencer</h3>
+                            <p class="reviews__text">
+                                Individual approach, good service, interesting new ideas, fast, high quality
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <button class="reviews__more-btn" id="showMoreBtn">Show more</button>
+
+                <!-- Modal -->
+                <div class="modal" id="modal">
+                    <div class="modal__content">
+                        <button class="modal__close" id="closeModalBtn">&times;</button>
+                        <h3 class="modal__title">Leave your review</h3>
+                        <form class="modal__form">
+                            <input type="text" placeholder="Your name" class="modal__input" required />
+                            <textarea placeholder="Your feedback" class="modal__textarea" required></textarea>
+                            <button type="submit" class="modal__submit button">Send</button>
+                        </form>
+                    </div>
                 </div>
-
-                <button class="reviews__button button" id="openModalBtn">
-                    Leave a review
-                </button>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal" id="modal">
-                <div class="modal__content">
-                    <button class="modal__close" id="closeModalBtn">&times;</button>
-                    <h3 class="modal__title">Leave your review</h3>
-                    <form class="modal__form">
-                        <input type="text" placeholder="Your name" class="modal__input" required />
-                        <textarea placeholder="Your feedback" class="modal__textarea" required></textarea>
-                        <button type="submit" class="modal__submit button">Send</button>
-                    </form>
-                </div>
-            </div>
 
         </section>
     </main>
@@ -284,6 +286,15 @@ business, brochures,illustrations
             </div>
         </div>
     </footer>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+    <div class="preloader__spinner"></div>
+</div>
+<script src="./js/preloader.js"></script>
+
+
+    <script src="./js/rewiews.js"></script>
 
 </body>
 

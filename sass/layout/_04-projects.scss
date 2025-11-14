@@ -3,13 +3,16 @@
     background-image: url(../images/project-1x-desktop.jpg);
     background-size: cover;
     background-position: center;
-    padding: 90px 0;
     text-align: center;
     color: var(--color-2);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .container{
+        padding: 26px 28px ;
+    }
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -19,17 +22,15 @@
     }
 
     &__title {
-        position: absolute;
-        top: 2%;
-        left: 25%;
         font-family: var(--font-family-2);
         font-weight: 700;
         font-size: 33px;
         letter-spacing: -0.1em;
         color: var(--color-5);
-        text-shadow: 6px 2px 0 var(--color-3),
+        text-shadow: 6px 2px 0 rgba(255, 0, 0, 0.42),
             10px 4px 0 #1a1a1a,
             0 0 8px rgba(0, 0, 0, 0.6);
+            margin-bottom: 54px;
     }
 
     &__list {
@@ -42,8 +43,8 @@
     &__card {
         border: 2px solid rgba(29, 28, 28, 0.33);
         border-radius: 11px;
-        width: 350px;
-        height: 225px;
+        width: 312px;
+        height: 190px;
         background: var(--background-gradient);
         box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -59,11 +60,11 @@
     }
 
     &__image {
-        border-radius: 17px;
-        width: 296px;
-        height: 184px;
-        position: absolute;
-        margin: 20px 25px;
+    border-radius: 17px;
+    width: 269px;
+    height: 154px;
+    position: absolute;
+    margin: 15px 20px;
     }
 
     &__info {
@@ -71,7 +72,7 @@
         flex-direction: column;
         text-align: start;
 
-        margin-top: 235px;
+        margin-top: 200px;
     }
 
     &__name {
@@ -95,7 +96,8 @@
     }
 
     &__button {
-        margin-top: 90px;
+        margin-top: 95.07px;
+        margin-bottom: 101px;
         background: var(--color-6);
         color: var(--color-2);
         border-radius: 27px;
@@ -116,8 +118,6 @@
     @media screen and (min-width: 768px) {
         .projects {
             &__title {
-                top: 1%;
-                left: 5%;
                 font-size: 57px;
             }
 
@@ -182,6 +182,11 @@
     /* 💻 Desktop */
     @media screen and (min-width: 1437px) {
         .projects {
+             &__title {
+                font-size: 57px;
+                text-align: left;
+                padding-left: 49px;
+            }
 
             
             &__list {

@@ -1,0 +1,22 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000; /* ще вище */
+}
+
+.preloader__spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 0, 0, 0.2);
+    border-top-color: #ff0000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

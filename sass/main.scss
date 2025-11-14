@@ -6,6 +6,7 @@
 @use "./components/containers" as *;
 @use "./components/burger" as *;
 @use "./components/modal" as *;
+@use "./components/preloader" as *;
 @use "./layout/01-header" as *;
 @use "./layout/02-hero" as *;
 @use "./layout/03-task" as *;
