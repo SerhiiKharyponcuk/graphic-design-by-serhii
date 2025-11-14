@@ -1,6 +1,6 @@
 .reviews {
     background-color: #000;
-    background-image: url("../images/rewiews-1x-desktop.jpg");
+    background-image: url("../images/reviews-1x-desktop.jpg");
     background-size: cover;
     background-position: center;
     padding: 0 0 1200px 0;
@@ -9,7 +9,7 @@
     position: relative;
 
     @media (min-resolution: 2dppx) {
-        background-image: url("../images/rewiews-2x-desktop.jpg");
+        background-image: url("../images/reviews-2x-desktop.jpg");
     }
 
     &__title {

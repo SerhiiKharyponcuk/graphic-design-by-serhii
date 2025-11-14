@@ -1114,7 +1114,7 @@ body {
 
 .reviews {
   background-color: #000;
-  background-image: url("../images/rewiews-1x-desktop.jpg");
+  background-image: url("../images/reviews-1x-desktop.jpg");
   background-size: cover;
   background-position: center;
   padding: 0 0 1200px 0;
@@ -1124,7 +1124,7 @@ body {
 }
 @media (min-resolution: 2dppx) {
   .reviews {
-    background-image: url("../images/rewiews-2x-desktop.jpg");
+    background-image: url("../images/reviews-2x-desktop.jpg");
   }
 }
 .reviews__title {
