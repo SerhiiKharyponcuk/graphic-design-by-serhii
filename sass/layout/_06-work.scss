@@ -1,0 +1,232 @@
+.work {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+
+    &__wrapper {
+        background-image: url("../../images/lets-1x-mobile..png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 100%;
+        padding: 220px 20px 280px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        border-radius: 20px;
+    }
+
+    &__left {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    &__title {
+        font-family: var(--font-family-2);
+        font-weight: 700;
+        font-size: 22px;
+        color: #f3d5d5;
+        max-width: 100%;
+    }
+
+    &__text {
+        font-family: var(--font-family);
+        color: #fff;
+        opacity: 0.85;
+        margin: 20px auto;
+        max-width: 260px;
+        font-size: 12px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__icon {
+        width: 70px;
+        height: 70px;
+        fill: #fff;
+        opacity: 0.85;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__right {
+        margin-top: 40px;
+    }
+
+    &__button {
+        width: 160px;
+        height: 50px;
+        border-radius: 22px;
+        border: none;
+
+        font-family: var(--font-family);
+        font-weight: 900;
+        font-size: 16px;
+        color: #f00;
+
+        cursor: pointer;
+        background: #f4e2e2;
+        box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.25);
+
+        transition: 0.3s;
+
+        &:hover {
+            background: rgba(238, 7, 7, 0.25);
+        }
+    }
+}
+
+@media (min-width: 370px) {
+    .work {
+        &__wrapper {
+            padding: 260px 20px 300px;
+        }
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__text {
+            max-width: 300px;
+            font-size: 13px;
+        }
+
+        &__icon {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .work {
+        padding: 80px 20px;
+        margin-top: -670px;
+
+        &__wrapper {
+            padding: 60px 30px;
+            background-image: url("../../images/lets-1x-desktop.png"),
+                              url("../../images/project-1x-desktop.jpg");
+            background-size: 90%, cover;
+            background-repeat: no-repeat;
+            border-radius: 25px;
+        }
+
+        &__left {
+            max-width: 100%;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-top: 100px;
+
+            &::after {
+                content: "";
+                width: 200px;
+                height: 3px;
+                background: #fff;
+                margin: 10px auto;
+                display: block;
+                border-radius: 2px;
+            }
+        }
+
+        &__text {
+            max-width: 500px;
+            font-size: 14px;
+        }
+
+        &__icons {
+            gap: 45px;
+            margin-top: 35px;
+        }
+
+        &__right {
+            margin-top: 55px;
+        }
+    }
+}
+
+
+@media (min-width: 1437px) {
+    .work {
+        margin-top: -725px;
+        padding: 140px 20px;
+
+        &__wrapper {
+            padding: 60px 70px;
+            height: 434px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            max-width: 1100px;
+
+            background-image: url("../../images/lets-1x-desktop.png"),
+                              url("../../images/project-1x-desktop.jpg");
+            background-size: 90%, cover;
+            background-position: center;
+        }
+
+        &__left {
+            max-width: 55%;
+        }
+
+        &__title {
+            font-size: 40px;
+            max-width: 582px;
+
+            &::after {
+                width: 100%;
+                max-width: 605px;
+                height: 4px;
+                background: #000;
+                margin: 12px 0;
+            }
+        }
+
+        &__text {
+            max-width: 412px;
+            font-size: 16px;
+        }
+
+        &__icons {
+            gap: 45px;
+            justify-content: flex-start;
+        }
+
+        &__icon {
+            width: 100px;
+            height: 90px;
+        }
+
+        &__right {
+            margin-right: 70px;
+            margin-top: 0;
+        }
+
+        &__button {
+            width: 202px;
+            height: 70px;
+            border-radius: 27px;
+            font-size: 19px;
+        }
+    }
+}

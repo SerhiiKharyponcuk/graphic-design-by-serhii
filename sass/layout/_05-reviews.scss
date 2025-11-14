@@ -97,7 +97,7 @@
         /* ITEM 3 */
         &--three {
             top: 67%;
-            left: 2%;
+            left: 0%;
             background-image:
                 url("../images/reviews-ellipse-24.svg"),
                 url("../images/reviews-ellipse-36.svg"),
@@ -184,7 +184,7 @@
         background-image: url("../images/reviews-1x-desktop.jpg");
         background-size: cover;
         background-position: center;
-        padding: 0 0 1200px 0;
+        padding: 0 0 1640px 0;
         color: #fff;
         text-align: center;
         position: relative;
@@ -242,7 +242,7 @@
 
             /* ITEM 2 */
             &--two {
-                top: 20%;
+                top: 15%;
                 left: 40%;
                 background-image:
                     url("../images/reviews-ellipse-27.svg"),
@@ -268,7 +268,7 @@
 
             /* ITEM 3 */
             &--three {
-                top: 56%;
+                top: 40%;
                 left: 20%;
                 background-image:
                     url("../images/reviews-ellipse-24.svg"),
@@ -345,3 +345,12 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+

@@ -238,21 +238,29 @@
                     </li>
                 </ul>
                 <button class="reviews__more-btn" id="showMoreBtn">Show more</button>
-
-                <!-- Modal -->
-                <div class="modal" id="modal">
-                    <div class="modal__content">
-                        <button class="modal__close" id="closeModalBtn">&times;</button>
-                        <h3 class="modal__title">Leave your review</h3>
-                        <form class="modal__form">
-                            <input type="text" placeholder="Your name" class="modal__input" required />
-                            <textarea placeholder="Your feedback" class="modal__textarea" required></textarea>
-                            <button type="submit" class="modal__submit button">Send</button>
-                        </form>
-                    </div>
-                </div>
-
         </section>
+        <section class="work">
+  <div class="work__wrapper">
+    <div class="work__left">
+      <h2 class="work__title">
+        Let’s work together on your next Project
+      </h2>
+
+      <p class="work__text">
+        If you want to contact me for an order, click on the button and contact me
+      </p>
+
+      <ul class="work__icons">
+        <li><img class="work__icon" src="./images/Instagram.png" alt="work__icon" width="115px" height="115px"></li>
+        <li><img class="work__icon" src="./images/b.png" alt="work__icon"></li>
+        <li><img class="work__icon" src="./images/watschat.png" alt="work__icon"></li>
+      </ul>
+    </div>
+    <div class="work__right">
+      <button class="work__button">Contact me</button>
+    </div>
+  </div>
+</section>
     </main>
     <footer class="footer" id="contacts">
         <div class="container">
@@ -280,12 +288,30 @@
                     <a href="mailto:serhii.design@gmail.com" class="footer__link">ulianausenko.design@gmail.com</a>
                 </p>
                 <p class="footer__contact">
-                    Phone:
                     <a href="tel:+380671234567" class="footer__link">+38 (067) 123-45-67</a>
                 </p>
             </div>
         </div>
     </footer>
+
+
+    <!-- ✦ OVERLAY + MODAL ✦ -->
+<div class="modal-backdrop" id="modal-backdrop"></div>
+
+<div class="modal" id="modal">
+  <div class="modal__content">
+    <h3 class="modal__title">personal information :</h3>
+
+    <form class="modal__form">
+      <input type="text" class="modal__input" placeholder="Name" />
+      <input type="text" class="modal__input" placeholder="Surname" />
+      <input type="email" class="modal__input" placeholder="E-mail" />
+
+      <button type="submit" class="modal__btn">Send</button>
+    </form>
+  </div>
+</div>
+
 
 <!-- PRELOADER -->
 <div class="preloader" id="preloader">
@@ -295,6 +321,9 @@
 
 
     <script src="./js/rewiews.js"></script>
+
+    <script src="./js/modal.js"></script>
+
 
 </body>
 

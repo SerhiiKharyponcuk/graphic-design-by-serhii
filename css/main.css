@@ -103,8 +103,6 @@ body {
 
 .container {
   width: 100%;
-  min-width: 320px;
-  max-width: 1600px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -214,7 +212,7 @@ body {
   .reviews__more-btn {
     position: absolute;
     top: 80%;
-    left: 30%;
+    left: 33%;
     padding: 10px 25px;
     font-size: 16px;
     border: none;
@@ -234,6 +232,32 @@ body {
     display: none;
   }
 }
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 1046px;
+  height: 681px;
+  max-width: 500px;
+  background: rgba(140, 0, 0, 0.55);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 0, 0, 0.45);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .preloader {
   position: fixed;
   inset: 0;
@@ -356,6 +380,7 @@ body {
   }
 }
 .hero .container {
+  width: 370px;
   height: 640px;
   display: flex;
   flex-direction: column;
@@ -1183,7 +1208,7 @@ body {
 }
 .reviews__item--three {
   top: 67%;
-  left: 2%;
+  left: 0%;
   background-image: url("../images/reviews-ellipse-24.svg"), url("../images/reviews-ellipse-36.svg"), url("../images/reviews-mark.svg"), url("../images/reviews-ellipse-22.svg"), url("../images/reviews-ellipse-33.svg");
   background-repeat: no-repeat;
   background-position: left 43px bottom 3px, left 43px bottom 0px, left 68px top 14px, right 55px top 108px, right 30px top 85px;
@@ -1249,7 +1274,7 @@ body {
     background-image: url("../images/reviews-1x-desktop.jpg");
     background-size: cover;
     background-position: center;
-    padding: 0 0 1200px 0;
+    padding: 0 0 1640px 0;
     color: #fff;
     text-align: center;
     position: relative;
@@ -1295,7 +1320,7 @@ body {
     bottom: 30px;
   }
   .reviews__item--two {
-    top: 20%;
+    top: 15%;
     left: 40%;
     background-image: url("../images/reviews-ellipse-27.svg"), url("../images/reviews-ellipse-35.svg"), url("../images/reviews-daria.svg"), url("../images/reviews-ellipse-19.svg"), url("../images/reviews-ellipse-33.svg");
     background-repeat: no-repeat;
@@ -1308,7 +1333,7 @@ body {
     bottom: 30px;
   }
   .reviews__item--three {
-    top: 56%;
+    top: 40%;
     left: 20%;
     background-image: url("../images/reviews-ellipse-24.svg"), url("../images/reviews-ellipse-36.svg"), url("../images/reviews-mark.svg"), url("../images/reviews-ellipse-22.svg"), url("../images/reviews-ellipse-33.svg");
     background-repeat: no-repeat;
@@ -1360,11 +1385,199 @@ body {
     font-size: 16px;
   }
 }
+.work {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+.work__wrapper {
+  background-image: url("../../images/lets-1x-mobile..png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 220px 20px 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+  border-radius: 20px;
+}
+.work__left {
+  text-align: center;
+  max-width: 100%;
+}
+.work__title {
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  font-size: 22px;
+  color: #f3d5d5;
+  max-width: 100%;
+}
+.work__text {
+  font-family: var(--font-family);
+  color: #fff;
+  opacity: 0.85;
+  margin: 20px auto;
+  max-width: 260px;
+  font-size: 12px;
+}
+.work__icons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.work__icon {
+  width: 70px;
+  height: 70px;
+  fill: #fff;
+  opacity: 0.85;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.work__icon:hover {
+  opacity: 1;
+}
+.work__right {
+  margin-top: 40px;
+}
+.work__button {
+  width: 160px;
+  height: 50px;
+  border-radius: 22px;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 16px;
+  color: #f00;
+  cursor: pointer;
+  background: #f4e2e2;
+  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+.work__button:hover {
+  background: rgba(238, 7, 7, 0.25);
+}
+
+@media (min-width: 370px) {
+  .work__wrapper {
+    padding: 260px 20px 300px;
+  }
+  .work__title {
+    font-size: 26px;
+  }
+  .work__text {
+    max-width: 300px;
+    font-size: 13px;
+  }
+  .work__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .work {
+    padding: 80px 20px;
+    margin-top: -670px;
+  }
+  .work__wrapper {
+    padding: 60px 30px;
+    background-image: url("../../images/lets-1x-desktop.png"), url("../../images/project-1x-desktop.jpg");
+    background-size: 90%, cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+  }
+  .work__left {
+    max-width: 100%;
+  }
+  .work__title {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+  .work__title::after {
+    content: "";
+    width: 200px;
+    height: 3px;
+    background: #fff;
+    margin: 10px auto;
+    display: block;
+    border-radius: 2px;
+  }
+  .work__text {
+    max-width: 500px;
+    font-size: 14px;
+  }
+  .work__icons {
+    gap: 45px;
+    margin-top: 35px;
+  }
+  .work__right {
+    margin-top: 55px;
+  }
+}
+@media (min-width: 1437px) {
+  .work {
+    margin-top: -725px;
+    padding: 140px 20px;
+  }
+  .work__wrapper {
+    padding: 60px 70px;
+    height: 434px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    background-image: url("../../images/lets-1x-desktop.png"), url("../../images/project-1x-desktop.jpg");
+    background-size: 90%, cover;
+    background-position: center;
+  }
+  .work__left {
+    max-width: 55%;
+  }
+  .work__title {
+    font-size: 40px;
+    max-width: 582px;
+  }
+  .work__title::after {
+    width: 100%;
+    max-width: 605px;
+    height: 4px;
+    background: #000;
+    margin: 12px 0;
+  }
+  .work__text {
+    max-width: 412px;
+    font-size: 16px;
+  }
+  .work__icons {
+    gap: 45px;
+    justify-content: flex-start;
+  }
+  .work__icon {
+    width: 100px;
+    height: 90px;
+  }
+  .work__right {
+    margin-right: 70px;
+    margin-top: 0;
+  }
+  .work__button {
+    width: 202px;
+    height: 70px;
+    border-radius: 27px;
+    font-size: 19px;
+  }
+}
 .footer {
   background: #000;
   color: #fff;
-  padding: 40px 0;
+  padding: 70px 0 40px 0;
   font-family: "Poppins", sans-serif;
+  display: none;
 }
 .footer .container {
   display: flex;
@@ -1421,6 +1634,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    display: block;
+  }
   .footer .container {
     flex-direction: row;
     justify-content: space-between;
