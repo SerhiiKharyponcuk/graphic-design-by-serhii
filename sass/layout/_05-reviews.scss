@@ -1,6 +1,6 @@
 .reviews {
     background-color: #000;
-    background-image: url(../images/rewiews-1x-desktop.jpg);
+    background-image: url("../../images/rewiews-1x-desktop.jpg");
     background-size: cover;
     background-position: center;
     padding: 0 0 1200px 0;
@@ -9,7 +9,7 @@
     position: relative;
 
     @media (min-resolution: 2dppx) {
-        background-image: url(../images/rewiews-2x-desktop.jpg);
+        background-image: url("../../images/rewiews-2x-desktop.jpg");
     }
 
     &__title {
@@ -47,14 +47,18 @@
             top: 35%;
             left: -1%;
             background-image:
-                url(../images/reviews-ellipse-20.svg),
-                url(../images/reviews-ellipse-34.svg),
-                url(../images/reviews-anna.svg),
-                url(../images/reviews-ellipse-19.svg),
-                url(../images/reviews-ellipse-33.svg);
+                url("../../images/reviews-ellipse-20.svg"),
+                url("../../images/reviews-ellipse-34.svg"),
+                url("../../images/reviews-anna.svg"),
+                url("../../images/reviews-ellipse-19.svg"),
+                url("../../images/reviews-ellipse-33.svg");
             background-repeat: no-repeat;
             background-position:
-                right 10px bottom -10px, right 10px bottom -10px, left 90px top -40px, left 90px top 99px, left 65px top 75px;
+                right 10px bottom -10px,
+                right 10px bottom -10px,
+                left 90px top -40px,
+                left 90px top 99px,
+                left 65px top 75px;
             background-size: 300px, 290px, 225px, 225px, 275px;
 
             .reviews__content {
@@ -69,20 +73,24 @@
             top: 5%;
             left: -1%;
             background-image:
-                url(../images/reviews-ellipse-27.svg),
-                url(../images/reviews-ellipse-35.svg),
-                url(../images/reviews-daria.svg),
-                url(../images/reviews-ellipse-19.svg),
-                url(../images/reviews-ellipse-33.svg);
+                url("../../images/reviews-ellipse-27.svg"),
+                url("../../images/reviews-ellipse-35.svg"),
+                url("../../images/reviews-daria.svg"),
+                url("../../images/reviews-ellipse-19.svg"),
+                url("../../images/reviews-ellipse-33.svg");
             background-repeat: no-repeat;
             background-position:
-                left 49px bottom -5px, left 49px bottom -4px, left 95px top -60px, right 35px top 67px, right 16px top 50px;
+                left 49px bottom -5px,
+                left 49px bottom -4px,
+                left 95px top -60px,
+                right 35px top 67px,
+                right 16px top 50px;
             background-size: 300px, 290px, 225px, 235px, 275px;
 
             .reviews__content {
                 position: absolute;
                 left: 95px;
-                bottom: 15px
+                bottom: 15px;
             }
         }
 
@@ -91,14 +99,18 @@
             top: 67%;
             left: 2%;
             background-image:
-                url(../images/reviews-ellipse-24.svg),
-                url(../images/reviews-ellipse-36.svg),
-                url(../images/reviews-mark.svg),
-                url(../images/reviews-ellipse-22.svg),
-                url(../images/reviews-ellipse-33.svg);
+                url("../../images/reviews-ellipse-24.svg"),
+                url("../../images/reviews-ellipse-36.svg"),
+                url("../../images/reviews-mark.svg"),
+                url("../../images/reviews-ellipse-22.svg"),
+                url("../../images/reviews-ellipse-33.svg");
             background-repeat: no-repeat;
             background-position:
-                left 43px bottom 3px, left 43px bottom 0px, left 68px top 14px, right 55px top 108px, right 30px top 85px;
+                left 43px bottom 3px,
+                left 43px bottom 0px,
+                left 68px top 14px,
+                right 55px top 108px,
+                right 30px top 85px;
             background-size: 285px, 290px, 225px, 250px, 300px;
 
             .reviews__subtitle {
@@ -169,7 +181,7 @@
 @media screen and (min-width: 768px) {
     .reviews {
         background-color: #000;
-        background-image: url(../images/rewiews-1x-desktop.jpg);
+        background-image: url("../../images/rewiews-1x-desktop.jpg");
         background-size: cover;
         background-position: center;
         padding: 0 0 1200px 0;
@@ -178,7 +190,7 @@
         position: relative;
 
         @media (min-resolution: 2dppx) {
-            background-image: url(../images/rewiews-2x-desktop.jpg);
+            background-image: url("../../images/rewiews-2x-desktop.jpg");
         }
 
         &__title {
@@ -192,14 +204,6 @@
                 0 0 8px rgba(0, 0, 0, 0.6);
         }
 
-        &__list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
         &__item {
             padding: 40px 25px;
             border-radius: 25px;
@@ -209,18 +213,17 @@
 
             width: 450px;
             height: 400px;
-            margin-top: 20px;
 
             /* ITEM 1 */
             &--one {
                 top: 3%;
                 left: -5%;
                 background-image:
-                    url(../images/reviews-ellipse-20.svg),
-                    url(../images/reviews-ellipse-34.svg),
-                    url(../images/reviews-anna.svg),
-                    url(../images/reviews-ellipse-19.svg),
-                    url(../images/reviews-ellipse-33.svg);
+                    url("../../images/reviews-ellipse-20.svg"),
+                    url("../../images/reviews-ellipse-34.svg"),
+                    url("../../images/reviews-anna.svg"),
+                    url("../../images/reviews-ellipse-19.svg"),
+                    url("../../images/reviews-ellipse-33.svg");
                 background-repeat: no-repeat;
                 background-position:
                     right 1px bottom 1px,
@@ -242,11 +245,11 @@
                 top: 20%;
                 left: 40%;
                 background-image:
-                    url(../images/reviews-ellipse-27.svg),
-                    url(../images/reviews-ellipse-35.svg),
-                    url(../images/reviews-daria.svg),
-                    url(../images/reviews-ellipse-19.svg),
-                    url(../images/reviews-ellipse-33.svg);
+                    url("../../images/reviews-ellipse-27.svg"),
+                    url("../../images/reviews-ellipse-35.svg"),
+                    url("../../images/reviews-daria.svg"),
+                    url("../../images/reviews-ellipse-19.svg"),
+                    url("../../images/reviews-ellipse-33.svg");
                 background-repeat: no-repeat;
                 background-position:
                     left 1px bottom 15px,
@@ -268,11 +271,11 @@
                 top: 56%;
                 left: 20%;
                 background-image:
-                    url(../images/reviews-ellipse-24.svg),
-                    url(../images/reviews-ellipse-36.svg),
-                    url(../images/reviews-mark.svg),
-                    url(../images/reviews-ellipse-22.svg),
-                    url(../images/reviews-ellipse-33.svg);
+                    url("../../images/reviews-ellipse-24.svg"),
+                    url("../../images/reviews-ellipse-36.svg"),
+                    url("../../images/reviews-mark.svg"),
+                    url("../../images/reviews-ellipse-22.svg"),
+                    url("../../images/reviews-ellipse-33.svg");
                 background-repeat: no-repeat;
                 background-position:
                     left 90px bottom 21px,
@@ -303,54 +306,13 @@
                 }
             }
         }
-
-        &__subtitle {
-            font-family: var(--font-family);
-            font-weight: 700;
-            font-size: 18px;
-            color: #000;
-
-            &::after {
-                content: "";
-                display: block;
-                width: 205px;
-                height: 2px;
-                background-color: #000;
-                margin: 8px auto 0;
-                border-radius: 1px;
-            }
-        }
-
-        &__text {
-            width: 200px;
-            font-family: var(--font-family);
-            font-weight: 400;
-            font-size: 16px;
-            color: #000;
-        }
-
-        &__button {
-            background: #e40000;
-            color: #fff;
-            border: none;
-            border-radius: 25px;
-            padding: 10px 25px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.3s ease;
-
-            &:hover {
-                background: #ff3333;
-            }
-        }
     }
 }
 
-/* 📌 DESKTOP LARGE 1200px (змінюєш тут top/left як хочеш!) */
+/* 📌 DESKTOP LARGE 1200px */
 @media screen and (min-width: 1200px) {
     .reviews {
 
-        /* тут можна змінювати позиції!!! */
         &__item--one {
             top: 3%;
             left: 10%;
