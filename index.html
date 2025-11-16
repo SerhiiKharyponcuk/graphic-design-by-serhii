@@ -31,7 +31,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="./index.html" class="header__link">Home</a>
+            <a href="./index.html" class="header__logo">Home</a>
             <button class="header__burger" type="button" aria-label="Open menu">
                 <svg class="icon-burger" width="33" height="30">
                     <use href="./images/sprite.svg#icon-burger"></use>
@@ -49,6 +49,23 @@
             <a href="#contacts" class="header__link">Contact me</a>
         </div>
     </header>
+    <!-- BURGER MENU OVERLAY -->
+    <div class="burger-overlay" id="burger-overlay">
+        <div class="burger-menu">
+            <h2 class="burger-title">Menu</h2>
+
+            <ul class="burger-list">
+                <li><a href="#hero" class="burger-link">About Me</a></li>
+                <li><a href="#task" class="burger-link burger-accent">My Task</a></li>
+                <li><a href="#projects" class="burger-link">Projects</a></li>
+                <li><a href="#reviews" class="burger-link burger-accent">Reviews</a></li>
+                <li><a href="#contacts" class="burger-link">Contacts</a></li>
+            </ul>
+
+            <button class="burger-close" id="burger-close">Close</button>
+        </div>
+    </div>
+
     <main>
         <section class="hero" id="hero">
             <div class="container">
@@ -77,7 +94,7 @@
 
                 <ul class="task__list">
                     <li class="task__item task__item--one">
-                            <h3 class="task__subtitle">Satisfy the client with quality work.</h3>
+                        <h3 class="task__subtitle">Satisfy the client with quality work.</h3>
                     </li>
 
                     <li class="task__item task__item--two">
@@ -240,27 +257,28 @@
                 <button class="reviews__more-btn" id="showMoreBtn">Show more</button>
         </section>
         <section class="work">
-  <div class="work__wrapper">
-    <div class="work__left">
-      <h2 class="work__title">
-        Let’s work together on your next Project
-      </h2>
+            <div class="work__wrapper">
+                <div class="work__left">
+                    <h2 class="work__title">
+                        Let’s work together on your next Project
+                    </h2>
 
-      <p class="work__text">
-        If you want to contact me for an order, click on the button and contact me
-      </p>
+                    <p class="work__text">
+                        If you want to contact me for an order, click on the button and contact me
+                    </p>
 
-      <ul class="work__icons">
-        <li><img class="work__icon" src="./images/Instagram.png" alt="work__icon" width="115px" height="115px"></li>
-        <li><img class="work__icon" src="./images/b.png" alt="work__icon"></li>
-        <li><img class="work__icon" src="./images/watschat.png" alt="work__icon"></li>
-      </ul>
-    </div>
-    <div class="work__right">
-      <button class="work__button">Contact me</button>
-    </div>
-  </div>
-</section>
+                    <ul class="work__icons">
+                        <li><img class="work__icon" src="./images/Instagram.png" alt="work__icon" width="115px"
+                                height="115px"></li>
+                        <li><img class="work__icon" src="./images/b.png" alt="work__icon"></li>
+                        <li><img class="work__icon" src="./images/watschat.png" alt="work__icon"></li>
+                    </ul>
+                </div>
+                <div class="work__right">
+                    <button class="work__button">Contact me</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer" id="contacts">
         <div class="container">
@@ -294,31 +312,46 @@
         </div>
     </footer>
 
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <h2 class="modal-title">personal information :</h2>
 
-    <!-- ✦ OVERLAY + MODAL ✦ -->
-<div class="modal-backdrop" id="modal-backdrop"></div>
+            <form class="modal-form">
+                <input type="text" class="modal-input" placeholder="Name" required>
+                <input type="text" class="modal-input" placeholder="Surname" required>
+                <input type="email" class="modal-input" placeholder="E-mail" required>
+                <p class="modal-error" id="modal-error">Please fill the form correctly</p>
+                <button class="modal-btn" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
 
-<div class="modal" id="modal">
-  <div class="modal__content">
-    <h3 class="modal__title">personal information :</h3>
+    <!-- THANK YOU SCREEN -->
+    <div class="modal-thanks" id="modal-thanks">
+        <h2 class="modal-thanks__title">
+            THANKS! <br>
+            I WILL DEFINITELY <br>
+            CONTACT YOU
+        </h2>
 
-    <form class="modal__form">
-      <input type="text" class="modal__input" placeholder="Name" />
-      <input type="text" class="modal__input" placeholder="Surname" />
-      <input type="email" class="modal__input" placeholder="E-mail" />
-
-      <button type="submit" class="modal__btn">Send</button>
-    </form>
-  </div>
-</div>
+        <button class="modal-thanks__btn" id="thanks-back">
+            Back
+        </button>
+    </div>
 
 
-<!-- PRELOADER -->
-<div class="preloader" id="preloader">
-    <div class="preloader__spinner"></div>
-</div>
-<script src="./js/preloader.js"></script>
 
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__spinner"></div>
+    </div>
+
+    <script src="./js/burger.js"></script>
+
+    <script src="./js/preloader.js"></script>
+
+    <script src="./js/_02-modal.js"></script>
 
     <script src="./js/rewiews.js"></script>
 

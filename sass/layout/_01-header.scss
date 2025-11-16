@@ -1,7 +1,7 @@
 .header {
     z-index: 1;
     position: absolute;
-    top: 20px;
+    top: 5px;
     width: 90%;
 
     .container {
@@ -73,6 +73,19 @@ font-size: 18px;
         }
 
         &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 40px;
+            font-family: var(--font-family);
+            font-weight: 900;
+            font-size: 19px;
+            color: var(--color-2);
+            border-radius: 27px;
+            background-color: var(--background-color-1);
+        }
+           &__logo {
             display: flex;
             align-items: center;
             justify-content: center;

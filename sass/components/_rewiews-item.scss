@@ -1,0 +1,33 @@
+
+/* 📌 MOBIL: Ховаємо 3-тю картку */
+@media screen and (max-width: 767px) {
+    .reviews__item--three {
+        display: none;
+    }
+
+    .reviews__more-btn {
+        position: absolute;
+        top: 80%;
+        left: 33%;
+        padding: 10px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        background: #e40000;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: #ff3333;
+        }
+    }
+}
+
+/* 📌 TABLET + DESKTOP — кнопка не потрібна */
+@media screen and (min-width: 768px) {
+    .reviews__more-btn {
+        display: none;
+    }
+}
+
