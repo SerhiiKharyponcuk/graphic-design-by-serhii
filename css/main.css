@@ -607,6 +607,13 @@ body {
   border-radius: 20px;
   text-decoration: none;
 }
+.header__logo {
+  display: none;
+  background: var(--background-color-1);
+  color: var(--color-2);
+  border-radius: 20px;
+  text-decoration: none;
+}
 
 .nav__list {
   display: flex;
@@ -617,6 +624,13 @@ body {
   padding: 0 30px;
 }
 .nav__link {
+  color: var(--color-2);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+}
+.nav__link__logo {
   color: var(--color-2);
   text-decoration: none;
   font-family: var(--font-family);

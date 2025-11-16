@@ -32,6 +32,14 @@
         text-decoration: none;
     
     }
+      &__logo{
+        display: none;
+        background: var(--background-color-1);
+        color: var(--color-2);
+        border-radius: 20px;
+        text-decoration: none;
+    
+    }
 }
 
 .nav {
@@ -50,6 +58,14 @@
         font-family: var(--font-family);
 font-weight: 400;
 font-size: 18px;
+
+  &__logo {
+        color: var(--color-2);
+        text-decoration: none;
+        font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+  }
 
         &:hover {
             color: var(--color-6);
