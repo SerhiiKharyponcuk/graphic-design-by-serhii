@@ -2,7 +2,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@
 }
 
 .modal-overlay.active {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   opacity: 1;
   pointer-events: auto;
 }
@@ -28,7 +28,7 @@
   border: 5px solid #8b0000;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 35px rgba(255,0,0,0.4), 0 0 70px rgba(255,0,0,0.2);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.4), 0 0 70px rgba(255, 0, 0, 0.2);
 }
 
 /* RED LIGHT SPOTS */
@@ -38,17 +38,24 @@
   position: absolute;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(255,0,0,0.35) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.35) 0%, transparent 70%);
   filter: blur(20px);
   animation: pulseLight 6s ease-in-out infinite;
 }
 
-.modal::before { left: -80px; top: 180px; }
-.modal::after { right: -80px; top: 0; }
+.modal::before {
+  left: -80px;
+  top: 180px;
+}
+
+.modal::after {
+  right: -80px;
+  top: 0;
+}
 
 /* MODAL TITLE */
 .modal-title {
-  font-size: 38px;
+  font-size: 25px;
   font-weight: 700;
   color: #fff;
   text-transform: lowercase;
@@ -69,20 +76,22 @@
   padding: 18px 20px;
   font-size: 18px;
   border-radius: 12px;
-  border: 3px solid rgba(255,0,0,0.6);
-  background: rgba(0,0,0,0.55);
+  border: 3px solid rgba(255, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(4px);
   color: #fff;
   outline: none;
   transition: 0.3s ease;
 }
 
-.modal-input::placeholder { color: #cfcfcf; }
+.modal-input::placeholder {
+  color: #cfcfcf;
+}
 
 .modal-input:focus {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   border-color: #ff0000;
-  box-shadow: 0 0 12px rgba(255,0,0,0.4);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
 }
 
 /* BUTTON */
@@ -113,12 +122,14 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(255,80,80,0.5) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 80, 80, 0.5) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.modal-btn:hover::after { opacity: 1; }
+.modal-btn:hover::after {
+  opacity: 1;
+}
 
 /* OPEN ANIMATION */
 .modal-overlay.active .modal {
@@ -131,36 +142,88 @@
 }
 
 @keyframes modalIn {
-  0% { opacity: 0; transform: scale(0.85); }
-  60% { opacity: 1; transform: scale(1.03); }
-  100% { transform: scale(1); }
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes modalOut {
-  0% { opacity: 1; transform: scale(1); }
-  40% { opacity: 0.5; transform: scale(0.93); }
-  100% { opacity: 0; transform: scale(0.85); }
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  40% {
+    opacity: 0.5;
+    transform: scale(0.93);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
 }
 
 /* SOFT GLOW */
 @keyframes modalGlow {
-  0% { box-shadow: 0 0 25px rgba(255,0,0,0.25), 0 0 55px rgba(255,0,0,0.15); }
-  100% { box-shadow: 0 0 45px rgba(255,0,0,0.45), 0 0 90px rgba(255,0,0,0.25); }
+  0% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.25), 0 0 55px rgba(255, 0, 0, 0.15);
+  }
+
+  100% {
+    box-shadow: 0 0 45px rgba(255, 0, 0, 0.45), 0 0 90px rgba(255, 0, 0, 0.25);
+  }
 }
 
 /* LIGHT PULSE */
 @keyframes pulseLight {
-  0% { opacity: 0.25; transform: scale(1); }
-  50% { opacity: 0.45; transform: scale(1.15); }
-  100% { opacity: 0.25; transform: scale(1); }
+  0% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
 }
 
 /* MOBILE */
 @media (max-width: 480px) {
-  .modal { padding: 30px 25px; border-width: 4px; }
-  .modal-title { font-size: 28px; margin-bottom: 35px; }
-  .modal-input { font-size: 16px; padding: 15px; }
-  .modal-btn { width: 160px; font-size: 18px; }
+  .modal {
+    padding: 30px 25px;
+    border-width: 4px;
+  }
+
+  .modal-title {
+    font-size: 13px;
+    margin-bottom: 35px;
+  }
+
+  .modal-input {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .modal-btn {
+    width: 160px;
+    font-size: 18px;
+  }
 }
 
 .modal-error {
@@ -186,7 +249,7 @@
 .modal-thanks {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +285,7 @@
   color: #fff;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255,0,0,0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
   transition: 0.3s;
 }
 

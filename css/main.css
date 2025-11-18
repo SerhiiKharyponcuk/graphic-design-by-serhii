@@ -298,7 +298,7 @@ body {
 
 /* MODAL TITLE */
 .modal-title {
-  font-size: 38px;
+  font-size: 25px;
   font-weight: 700;
   color: #fff;
   text-transform: lowercase;
@@ -442,7 +442,7 @@ body {
     border-width: 4px;
   }
   .modal-title {
-    font-size: 28px;
+    font-size: 13px;
     margin-bottom: 35px;
   }
   .modal-input {
@@ -1878,6 +1878,7 @@ body {
   .work__icons {
     gap: 45px;
     justify-content: flex-start;
+    padding-bottom: 76px;
   }
   .work__icon {
     width: 100px;
